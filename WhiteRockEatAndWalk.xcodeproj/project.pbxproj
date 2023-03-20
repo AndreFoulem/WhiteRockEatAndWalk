@@ -1,0 +1,384 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		90B8DAB229C8FE19002B0DCD /* WhiteRockEatAndWalkApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B8DAB129C8FE19002B0DCD /* WhiteRockEatAndWalkApp.swift */; };
+		90B8DAB429C8FE19002B0DCD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B8DAB329C8FE19002B0DCD /* ContentView.swift */; };
+		90B8DAB629C8FE19002B0DCD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90B8DAB529C8FE19002B0DCD /* Assets.xcassets */; };
+		90B8DAB929C8FE19002B0DCD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90B8DAB829C8FE19002B0DCD /* Preview Assets.xcassets */; };
+		90B8DAC129C90429002B0DCD /* Color+ColorSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B8DAC029C90429002B0DCD /* Color+ColorSet.swift */; };
+		90B8DAC529C90CBE002B0DCD /* AppTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B8DAC429C90CBE002B0DCD /* AppTabView.swift */; };
+		90B8DAC829C912E5002B0DCD /* LocationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B8DAC729C912E5002B0DCD /* LocationListView.swift */; };
+		90B8DACA29C912FF002B0DCD /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B8DAC929C912FF002B0DCD /* ProfileView.swift */; };
+		90B8DACC29C91314002B0DCD /* LocationMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B8DACB29C91314002B0DCD /* LocationMapView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		90B8DAAE29C8FE19002B0DCD /* WhiteRockEatAndWalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhiteRockEatAndWalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		90B8DAB129C8FE19002B0DCD /* WhiteRockEatAndWalkApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteRockEatAndWalkApp.swift; sourceTree = "<group>"; };
+		90B8DAB329C8FE19002B0DCD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		90B8DAB529C8FE19002B0DCD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		90B8DAB829C8FE19002B0DCD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		90B8DABF29C8FFA4002B0DCD /* WhiteRockEatAndWalk.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WhiteRockEatAndWalk.entitlements; sourceTree = "<group>"; };
+		90B8DAC029C90429002B0DCD /* Color+ColorSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+ColorSet.swift"; sourceTree = "<group>"; };
+		90B8DAC429C90CBE002B0DCD /* AppTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabView.swift; sourceTree = "<group>"; };
+		90B8DAC729C912E5002B0DCD /* LocationListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationListView.swift; sourceTree = "<group>"; };
+		90B8DAC929C912FF002B0DCD /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		90B8DACB29C91314002B0DCD /* LocationMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMapView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		90B8DAAB29C8FE19002B0DCD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		90B8DAA529C8FE19002B0DCD = {
+			isa = PBXGroup;
+			children = (
+				90B8DAB029C8FE19002B0DCD /* WhiteRockEatAndWalk */,
+				90B8DAAF29C8FE19002B0DCD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		90B8DAAF29C8FE19002B0DCD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				90B8DAAE29C8FE19002B0DCD /* WhiteRockEatAndWalk.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		90B8DAB029C8FE19002B0DCD /* WhiteRockEatAndWalk */ = {
+			isa = PBXGroup;
+			children = (
+				90B8DAB729C8FE19002B0DCD /* Preview Content */,
+				90B8DABF29C8FFA4002B0DCD /* WhiteRockEatAndWalk.entitlements */,
+				90B8DAB529C8FE19002B0DCD /* Assets.xcassets */,
+				90B8DAB129C8FE19002B0DCD /* WhiteRockEatAndWalkApp.swift */,
+				90B8DAB329C8FE19002B0DCD /* ContentView.swift */,
+				90B8DAC629C90CC4002B0DCD /* Views */,
+				90B8DAC229C9042E002B0DCD /* Extensions */,
+			);
+			path = WhiteRockEatAndWalk;
+			sourceTree = "<group>";
+		};
+		90B8DAB729C8FE19002B0DCD /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				90B8DAB829C8FE19002B0DCD /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		90B8DAC229C9042E002B0DCD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				90B8DAC029C90429002B0DCD /* Color+ColorSet.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		90B8DAC629C90CC4002B0DCD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				90B8DAC429C90CBE002B0DCD /* AppTabView.swift */,
+				90B8DAC729C912E5002B0DCD /* LocationListView.swift */,
+				90B8DACB29C91314002B0DCD /* LocationMapView.swift */,
+				90B8DAC929C912FF002B0DCD /* ProfileView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		90B8DAAD29C8FE19002B0DCD /* WhiteRockEatAndWalk */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 90B8DABC29C8FE19002B0DCD /* Build configuration list for PBXNativeTarget "WhiteRockEatAndWalk" */;
+			buildPhases = (
+				90B8DAAA29C8FE19002B0DCD /* Sources */,
+				90B8DAAB29C8FE19002B0DCD /* Frameworks */,
+				90B8DAAC29C8FE19002B0DCD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WhiteRockEatAndWalk;
+			productName = WhiteRockEatAndWalk;
+			productReference = 90B8DAAE29C8FE19002B0DCD /* WhiteRockEatAndWalk.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		90B8DAA629C8FE19002B0DCD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					90B8DAAD29C8FE19002B0DCD = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = 90B8DAA929C8FE19002B0DCD /* Build configuration list for PBXProject "WhiteRockEatAndWalk" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 90B8DAA529C8FE19002B0DCD;
+			productRefGroup = 90B8DAAF29C8FE19002B0DCD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				90B8DAAD29C8FE19002B0DCD /* WhiteRockEatAndWalk */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		90B8DAAC29C8FE19002B0DCD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90B8DAB929C8FE19002B0DCD /* Preview Assets.xcassets in Resources */,
+				90B8DAB629C8FE19002B0DCD /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		90B8DAAA29C8FE19002B0DCD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90B8DAB429C8FE19002B0DCD /* ContentView.swift in Sources */,
+				90B8DAC829C912E5002B0DCD /* LocationListView.swift in Sources */,
+				90B8DAB229C8FE19002B0DCD /* WhiteRockEatAndWalkApp.swift in Sources */,
+				90B8DACC29C91314002B0DCD /* LocationMapView.swift in Sources */,
+				90B8DAC529C90CBE002B0DCD /* AppTabView.swift in Sources */,
+				90B8DACA29C912FF002B0DCD /* ProfileView.swift in Sources */,
+				90B8DAC129C90429002B0DCD /* Color+ColorSet.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		90B8DABA29C8FE19002B0DCD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		90B8DABB29C8FE19002B0DCD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		90B8DABD29C8FE19002B0DCD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = WhiteRockEatAndWalk/WhiteRockEatAndWalk.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"WhiteRockEatAndWalk/Preview Content\"";
+				DEVELOPMENT_TEAM = S87U79A5HD;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = skyplanet.WhiteRockEatAndWalk;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		90B8DABE29C8FE19002B0DCD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = WhiteRockEatAndWalk/WhiteRockEatAndWalk.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"WhiteRockEatAndWalk/Preview Content\"";
+				DEVELOPMENT_TEAM = S87U79A5HD;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = skyplanet.WhiteRockEatAndWalk;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		90B8DAA929C8FE19002B0DCD /* Build configuration list for PBXProject "WhiteRockEatAndWalk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90B8DABA29C8FE19002B0DCD /* Debug */,
+				90B8DABB29C8FE19002B0DCD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		90B8DABC29C8FE19002B0DCD /* Build configuration list for PBXNativeTarget "WhiteRockEatAndWalk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90B8DABD29C8FE19002B0DCD /* Debug */,
+				90B8DABE29C8FE19002B0DCD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 90B8DAA629C8FE19002B0DCD /* Project object */;
+}
