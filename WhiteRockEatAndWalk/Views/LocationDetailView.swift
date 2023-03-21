@@ -48,10 +48,9 @@ struct LocationDetailView: View {
                       
                     } label: { LocationActionButton(bgColor: .brandPrimary, fillColor: .white, imageName: "location.fill")
                     }
-                    Button {
-                      
-                    } label: { LocationActionButton(bgColor: .brandPrimary, fillColor: .white, imageName: "network")
-                    }
+                    Link(destination: URL(string: "https://www.apple.com")!, label: {
+                      LocationActionButton(bgColor: .brandPrimary, fillColor: .white, imageName: "network")
+                    })
                     Button {
                       
                     } label: { LocationActionButton(bgColor: .brandPrimary, fillColor: .white, imageName: "phone.fill")
