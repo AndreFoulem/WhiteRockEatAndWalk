@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct LocationDetailView: View {
+  
     var body: some View {
+      
         NavigationView {
           
           VStack {
@@ -17,29 +19,39 @@ struct LocationDetailView: View {
               .scaledToFill()
               .frame(height: 150)
             
-            HStack {
-              Label("123 Main Street", systemImage: "mappin.and.ellipse")
-                .font(.caption)
-                .underline()
-                .foregroundColor(.gray)
+            //-> sub banner image Container
+            VStack {
+                HStack {
+                  Label("123 Main Street", systemImage: "mappin.and.ellipse")
+                    .font(.caption)
+                    .underline()
+                    .foregroundColor(.gray)
+                  
+                  Image(systemName:"arrowshape.turn.up.backward.circle.fill")
+                    .foregroundColor(.brandPrimary)
+                }
+                .padding(.vertical, 2)
+                
+                Text("This is a description of a description of a restaurant it is the best place of the world  description of a description of a restaurant it is the best place of the world")
+                  .lineLimit(3)
+                  .minimumScaleFactor(0.70)
+                
+                  ZStack {
+                  Capsule()
+                    .frame(height: 80)
+                    .foregroundColor(.secondary)
+                  }
               
-              Image(systemName:"arrowshape.turn.up.backward.circle.fill")
-                .foregroundColor(.brandPrimary)
-            }
-            .padding(.vertical, 2)
-
-            Text("This is a description of a description of a restaurant it is the best place of the world  description of a description of a restaurant it is the best place of the world")
-              .lineLimit(3)
-              .minimumScaleFactor(0.70)
-              .padding(.horizontal)
-              
-            Spacer()
-          }
+                  Spacer()
+            }//vs
+            .padding(.horizontal)
+          
+          }//vs
           .navigationTitle("name")
           .navigationBarTitleDisplayMode(.inline)
-        }//vs
+        }//nav
      
-    }
+    }//body
 }
 
 struct LocationDetailView_Previews: PreviewProvider {
