@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-struct LocationListView: View {
+struct LocationsView: View {
     var body: some View {
         Text("LocationListView")
     }
 }
 
-struct LocationListView_Previews: PreviewProvider {
+struct LocationsView_Previews: PreviewProvider {
     static var previews: some View {
-        LocationListView()
+        LocationsView()
     }
 }

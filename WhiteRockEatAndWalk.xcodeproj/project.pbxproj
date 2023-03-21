@@ -12,10 +12,10 @@
 		90B8DAB629C8FE19002B0DCD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90B8DAB529C8FE19002B0DCD /* Assets.xcassets */; };
 		90B8DAB929C8FE19002B0DCD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90B8DAB829C8FE19002B0DCD /* Preview Assets.xcassets */; };
 		90B8DAC129C90429002B0DCD /* Color+ColorSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B8DAC029C90429002B0DCD /* Color+ColorSet.swift */; };
-		90B8DAC529C90CBE002B0DCD /* AppTabV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B8DAC429C90CBE002B0DCD /* AppTabV.swift */; };
-		90B8DAC829C912E5002B0DCD /* LocationListV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B8DAC729C912E5002B0DCD /* LocationListV.swift */; };
+		90B8DAC529C90CBE002B0DCD /* AppTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B8DAC429C90CBE002B0DCD /* AppTabView.swift */; };
+		90B8DAC829C912E5002B0DCD /* LocationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B8DAC729C912E5002B0DCD /* LocationsView.swift */; };
 		90B8DACA29C912FF002B0DCD /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B8DAC929C912FF002B0DCD /* ProfileView.swift */; };
-		90B8DACC29C91314002B0DCD /* LocationMapV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B8DACB29C91314002B0DCD /* LocationMapV.swift */; };
+		90B8DACC29C91314002B0DCD /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B8DACB29C91314002B0DCD /* MapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,10 +26,10 @@
 		90B8DAB829C8FE19002B0DCD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		90B8DABF29C8FFA4002B0DCD /* WhiteRockEatAndWalk.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WhiteRockEatAndWalk.entitlements; sourceTree = "<group>"; };
 		90B8DAC029C90429002B0DCD /* Color+ColorSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+ColorSet.swift"; sourceTree = "<group>"; };
-		90B8DAC429C90CBE002B0DCD /* AppTabV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabV.swift; sourceTree = "<group>"; };
-		90B8DAC729C912E5002B0DCD /* LocationListV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationListV.swift; sourceTree = "<group>"; };
+		90B8DAC429C90CBE002B0DCD /* AppTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabView.swift; sourceTree = "<group>"; };
+		90B8DAC729C912E5002B0DCD /* LocationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsView.swift; sourceTree = "<group>"; };
 		90B8DAC929C912FF002B0DCD /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
-		90B8DACB29C91314002B0DCD /* LocationMapV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMapV.swift; sourceTree = "<group>"; };
+		90B8DACB29C91314002B0DCD /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,9 +92,9 @@
 		90B8DAC629C90CC4002B0DCD /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				90B8DAC429C90CBE002B0DCD /* AppTabV.swift */,
-				90B8DAC729C912E5002B0DCD /* LocationListV.swift */,
-				90B8DACB29C91314002B0DCD /* LocationMapV.swift */,
+				90B8DAC429C90CBE002B0DCD /* AppTabView.swift */,
+				90B8DAC729C912E5002B0DCD /* LocationsView.swift */,
+				90B8DACB29C91314002B0DCD /* MapView.swift */,
 				90B8DAC929C912FF002B0DCD /* ProfileView.swift */,
 			);
 			path = Views;
@@ -171,10 +171,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				90B8DAB429C8FE19002B0DCD /* ContentView.swift in Sources */,
-				90B8DAC829C912E5002B0DCD /* LocationListV.swift in Sources */,
+				90B8DAC829C912E5002B0DCD /* LocationsView.swift in Sources */,
 				90B8DAB229C8FE19002B0DCD /* WhiteRockEatAndWalkApp.swift in Sources */,
-				90B8DACC29C91314002B0DCD /* LocationMapV.swift in Sources */,
-				90B8DAC529C90CBE002B0DCD /* AppTabV.swift in Sources */,
+				90B8DACC29C91314002B0DCD /* MapView.swift in Sources */,
+				90B8DAC529C90CBE002B0DCD /* AppTabView.swift in Sources */,
 				90B8DACA29C912FF002B0DCD /* ProfileView.swift in Sources */,
 				90B8DAC129C90429002B0DCD /* Color+ColorSet.swift in Sources */,
 			);
