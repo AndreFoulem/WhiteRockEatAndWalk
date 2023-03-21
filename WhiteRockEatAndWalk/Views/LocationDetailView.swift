@@ -48,25 +48,41 @@ struct LocationDetailView: View {
                       
                     } label: { LocationActionButton(bgColor: .brandPrimary, fillColor: .white, imageName: "location.fill")
                     }
+                    
                     Link(destination: URL(string: "https://www.apple.com")!, label: {
                       LocationActionButton(bgColor: .brandPrimary, fillColor: .white, imageName: "network")
                     })
+                    
                     Button {
                       
                     } label: { LocationActionButton(bgColor: .brandPrimary, fillColor: .white, imageName: "phone.fill")
                     }
+                    
                     Button {
                       
                     } label: { LocationActionButton(bgColor: .brandPrimary, fillColor: .white, imageName: "person.fill.checkmark",
                      iconHeight: 20)
                     }
-                  }
+                  }//hs
                 
-                }
+                }//zs
               
               
-                  Spacer()
-            }//vs
+                Text("what's here")
+                .bold()
+              
+              LazyVGrid(columns: [GridItem(.flexible()),
+                                  GridItem(.flexible()),
+                                  GridItem(.flexible())]) {
+                FirstNameAvatarView(firstName: "Ice Cream")
+                FirstNameAvatarView(firstName: "Ice milk")
+                FirstNameAvatarView(firstName: "Figh Chips")
+              }
+               
+              
+              Spacer()
+              
+            }//vs sub-banner container
             .padding(.horizontal)
           
           }//vs
@@ -99,6 +115,21 @@ struct LocationActionButton: View {
         .scaledToFit()
         .foregroundColor(fillColor)
         .frame(height: iconHeight)
+    }
+  }
+}
+
+struct FirstNameAvatarView: View {
+  
+  var firstName: String
+  
+  var body: some View {
+    VStack {
+      AvatarView(size: 64)
+      Text(firstName)
+        .bold()
+        .lineLimit(1)
+        .minimumScaleFactor(0.70)
     }
   }
 }

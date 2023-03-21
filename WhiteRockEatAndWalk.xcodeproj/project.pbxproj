@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		90A8A02429C961760096C833 /* LocationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A8A02329C961760096C833 /* LocationDetailView.swift */; };
+		90A8A02629CA35CE0096C833 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A8A02529CA35CE0096C833 /* AvatarView.swift */; };
 		90B8DAB229C8FE19002B0DCD /* WhiteRockEatAndWalkApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B8DAB129C8FE19002B0DCD /* WhiteRockEatAndWalkApp.swift */; };
 		90B8DAB429C8FE19002B0DCD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B8DAB329C8FE19002B0DCD /* ContentView.swift */; };
 		90B8DAB629C8FE19002B0DCD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90B8DAB529C8FE19002B0DCD /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		90A8A02329C961760096C833 /* LocationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailView.swift; sourceTree = "<group>"; };
+		90A8A02529CA35CE0096C833 /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
 		90B8DAAE29C8FE19002B0DCD /* WhiteRockEatAndWalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhiteRockEatAndWalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90B8DAB129C8FE19002B0DCD /* WhiteRockEatAndWalkApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteRockEatAndWalkApp.swift; sourceTree = "<group>"; };
 		90B8DAB329C8FE19002B0DCD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 			children = (
 				90B8DAC429C90CBE002B0DCD /* AppTabView.swift */,
 				90B8DAC729C912E5002B0DCD /* LocationsView.swift */,
+				90A8A02529CA35CE0096C833 /* AvatarView.swift */,
 				90A8A02329C961760096C833 /* LocationDetailView.swift */,
 				90A8A02229C961680096C833 /* New Group */,
 				90B8DACB29C91314002B0DCD /* MapView.swift */,
@@ -188,6 +191,7 @@
 				90B8DACC29C91314002B0DCD /* MapView.swift in Sources */,
 				90B8DAC529C90CBE002B0DCD /* AppTabView.swift in Sources */,
 				90B8DACA29C912FF002B0DCD /* ProfileView.swift in Sources */,
+				90A8A02629CA35CE0096C833 /* AvatarView.swift in Sources */,
 				90B8DAC129C90429002B0DCD /* Color+ColorSet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

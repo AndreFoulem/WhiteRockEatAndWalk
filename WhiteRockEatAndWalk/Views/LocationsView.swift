@@ -34,7 +34,7 @@ struct LocationsView: View {
                 }
               }
               .padding(.leading,4)
-            }
+            }//hs
            
           }
         }
@@ -50,12 +50,12 @@ struct LocationsView_Previews: PreviewProvider {
     }
 }
 
-struct AvatarView: View {
-  var body: some View {
-    Image("default-avatar")
-      .resizable()
-      .scaledToFit()
-      .frame(width: 35, height: 35)
-      .clipShape(Circle())
-  }
-}
+//struct AvatarView: View {
+//  var body: some View {
+//    Image("default-avatar")
+//      .resizable()
+//      .scaledToFit()
+//      .frame(width: 35, height: 35)
+//      .clipShape(Circle())
+//  }
+//}
