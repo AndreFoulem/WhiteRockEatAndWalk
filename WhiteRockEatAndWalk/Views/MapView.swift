@@ -5,9 +5,11 @@
 //  Created by AndreMacBook on 2023-03-20.
 //
 
+
 import SwiftUI
 import MapKit
-//49.01759629532258, -122.80570195269159
+
+
 struct MapView: View {
     @State private var westBeach = MKCoordinateRegion(
       center: CLLocationCoordinate2D(latitude: 49.0230, longitude: -122.8087),
@@ -20,14 +22,10 @@ struct MapView: View {
     var body: some View {
       ZStack {
         
-        Map(coordinateRegion: $westBeach)
-          .ignoresSafeArea()
+        Map(coordinateRegion: $westBeach).ignoresSafeArea()
         
         VStack {
-          Image("ddg-map-logo")
-            .resizable()
-            .scaledToFit()
-          .frame(height: 70)
+          LogoView()
           Spacer()
         }
         
@@ -36,8 +34,17 @@ struct MapView: View {
     }//body
 }
 
+struct LogoView: View {
+  var body: some View {
+    Image("ddg-map-logo")
+      .resizable()
+      .scaledToFit()
+      .frame(height: 70)
+  }
+}
+
 struct MapView_Previews: PreviewProvider {
-    static var previews: some View {
-        MapView()
-    }
+  static var previews: some View {
+    MapView()
+  }
 }
