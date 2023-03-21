@@ -44,7 +44,23 @@ struct LocationDetailView: View {
                   
                     //-> circle btns
                   HStack {
-                    LocationActionButton(bgColor: .brandPrimary, fillColor: .white, imageName: "location.fill")
+                    Button {
+                      
+                    } label: { LocationActionButton(bgColor: .brandPrimary, fillColor: .white, imageName: "location.fill")
+                    }
+                    Button {
+                      
+                    } label: { LocationActionButton(bgColor: .brandPrimary, fillColor: .white, imageName: "network")
+                    }
+                    Button {
+                      
+                    } label: { LocationActionButton(bgColor: .brandPrimary, fillColor: .white, imageName: "phone.fill")
+                    }
+                    Button {
+                      
+                    } label: { LocationActionButton(bgColor: .brandPrimary, fillColor: .white, imageName: "person.fill.checkmark",
+                     iconHeight: 20)
+                    }
                   }
                 
                 }
@@ -72,6 +88,7 @@ struct LocationActionButton: View {
   var bgColor: Color
   var fillColor: Color
   var imageName: String
+  var iconHeight: CGFloat = 22
   
   var body: some View {
     ZStack {
@@ -80,8 +97,9 @@ struct LocationActionButton: View {
         .frame(height: 60)
       Image(systemName: imageName)
         .resizable()
+        .scaledToFit()
         .foregroundColor(fillColor)
-        .frame(width: 22, height: 22)
+        .frame(height: iconHeight)
     }
   }
 }
