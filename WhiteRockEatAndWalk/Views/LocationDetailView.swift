@@ -36,11 +36,19 @@ struct LocationDetailView: View {
                   .lineLimit(3)
                   .minimumScaleFactor(0.70)
                 
-                  ZStack {
-                  Capsule()
-                    .frame(height: 80)
-                    .foregroundColor(.secondary)
+          
+                ZStack {
+                    Capsule()
+                      .frame(height: 80)
+                      .foregroundColor(.secondary)
+                  
+                    //-> circle btns
+                  HStack {
+                    LocationActionButton(bgColor: .brandPrimary, fillColor: .white, imageName: "location.fill")
                   }
+                
+                }
+              
               
                   Spacer()
             }//vs
@@ -58,4 +66,22 @@ struct LocationDetailView_Previews: PreviewProvider {
     static var previews: some View {
         LocationDetailView()
     }
+}
+
+struct LocationActionButton: View {
+  var bgColor: Color
+  var fillColor: Color
+  var imageName: String
+  
+  var body: some View {
+    ZStack {
+      Circle()
+        .foregroundColor(bgColor)
+        .frame(height: 60)
+      Image(systemName: imageName)
+        .resizable()
+        .foregroundColor(fillColor)
+        .frame(width: 22, height: 22)
+    }
+  }
 }
