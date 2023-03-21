@@ -12,8 +12,10 @@ struct LocationsView: View {
       NavigationView {
         List {
           ForEach(0..<10) { _ in
-            LocationCellView()//hs
-           
+            
+            NavigationLink(destination: LocationDetailView()) {
+              LocationCellView()
+            }//hs
           }
         }
         .navigationTitle("Ice Cream")

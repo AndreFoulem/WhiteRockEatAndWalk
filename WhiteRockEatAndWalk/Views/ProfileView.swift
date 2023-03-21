@@ -8,8 +8,38 @@
 import SwiftUI
 
 struct ProfileView: View {
+  
     var body: some View {
-        Text("Profile")
+      
+      VStack {
+        
+        HStack {
+          Text("Profile")
+            .font(.title)
+            .bold()
+          .padding(.trailing)
+          Spacer()
+        }
+
+          ZStack {
+            Color(.secondarySystemBackground)
+              .frame(height: 130)
+              .cornerRadius(12)
+            
+            HStack {
+              ZStack {
+                AvatarView(size: 84)
+                Image(systemName: "pencil")
+                  .foregroundColor(.white)
+              }
+            }
+          }//zs
+          Spacer()
+          
+        }//vs
+      .padding(.horizontal)
+//      .navigationTitle("Profile")
+      
     }
 }
 
