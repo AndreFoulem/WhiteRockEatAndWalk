@@ -12,29 +12,12 @@ struct LocationDetailView: View {
     var body: some View {
       
       VStack {
-        Image("default-banner-asset")
-          .resizable()
-          .scaledToFill()
-          .frame(height: 150)
+        banner
         
           //-> sub banner image Container
         VStack {
-          HStack {
-            Label("123 Main Street", systemImage: "mappin.and.ellipse")
-              .font(.caption)
-              .underline()
-              .foregroundColor(.gray)
-            
-            Image(systemName:"arrowshape.turn.up.backward.circle.fill")
-              .foregroundColor(.brandPrimary)
-          }
-          .padding(.vertical, 2)
-          
-          Text("This is a description of a description of a restaurant it is the best place of the world  description of a description of a restaurant it is the best place of the world")
-            .lineLimit(3)
-            .minimumScaleFactor(0.70)
-          
-          
+          address
+          description
           ZStack {
             Capsule()
               .frame(height: 80)
@@ -99,13 +82,37 @@ struct LocationDetailView: View {
     }//body
 }
 
-struct LocationDetailView_Previews: PreviewProvider {
-  static var previews: some View {
-    NavigationView {
-      LocationDetailView()
-    }
+extension LocationDetailView {
+  
+  var banner: some View {
+    Image("default-banner-asset")
+      .resizable()
+      .scaledToFill()
+      .frame(height: 150)
   }
+  
+  var address: some View {
+    HStack {
+      Label("123 Main Street", systemImage: "mappin.and.ellipse")
+        .font(.caption)
+        .underline()
+        .foregroundColor(.gray)
+      
+      Image(systemName:"arrowshape.turn.up.backward.circle.fill")
+        .foregroundColor(.brandPrimary)
+    }
+    .padding(.vertical, 2)
+  }
+  
+  var description: some View {
+    Text("This is a description of a description of a restaurant it is the best place of the world  description of a description of a restaurant it is the best place of the world")
+      .lineLimit(3)
+      .minimumScaleFactor(0.70)
+  }
+  
 }
+
+
 
 struct LocationActionButton: View {
   var bgColor: Color
@@ -123,6 +130,15 @@ struct LocationActionButton: View {
         .scaledToFit()
         .foregroundColor(fillColor)
         .frame(height: iconHeight)
+    }
+  }
+}
+
+
+struct LocationDetailView_Previews: PreviewProvider {
+  static var previews: some View {
+    NavigationView {
+      LocationDetailView()
     }
   }
 }

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+//! import AvatarView
 
 struct ProfileView: View {
     @State private var firstName = ""
@@ -103,12 +104,7 @@ extension ProfileView {
     Button {
       
     } label: {
-      Text("Save Profile")
-        .bold()
-        .frame(width: 280, height: 44)
-        .foregroundColor(.white)
-        .background(Color.brandPrimary)
-        .cornerRadius(8)
+       ButtonLabel(label: "Save")
     }
   }
 }
