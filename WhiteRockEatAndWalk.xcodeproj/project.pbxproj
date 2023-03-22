@@ -102,7 +102,7 @@
 				90B8DAB129C8FE19002B0DCD /* WhiteRockEatAndWalkApp.swift */,
 				90B8DAB329C8FE19002B0DCD /* ContentView.swift */,
 				90A8A02229C961680096C833 /* Components (Views) */,
-				90B8DAC629C90CC4002B0DCD /* Page (Views) */,
+				90B8DAC629C90CC4002B0DCD /* Screens (Views) */,
 				90A8A02D29CA9EB20096C833 /* Modifiers */,
 				90B8DAC229C9042E002B0DCD /* Extensions */,
 			);
@@ -126,7 +126,7 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		90B8DAC629C90CC4002B0DCD /* Page (Views) */ = {
+		90B8DAC629C90CC4002B0DCD /* Screens (Views) */ = {
 			isa = PBXGroup;
 			children = (
 				90B8DAC729C912E5002B0DCD /* LocationsView.swift */,
@@ -134,7 +134,7 @@
 				90B8DACB29C91314002B0DCD /* MapView.swift */,
 				90B8DAC929C912FF002B0DCD /* ProfileView.swift */,
 			);
-			path = "Page (Views)";
+			path = "Screens (Views)";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

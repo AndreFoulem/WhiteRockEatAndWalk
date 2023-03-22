@@ -25,6 +25,9 @@ struct LocationsView: View {
     }//body
 }
 
+//
+// PREVIEW
+//
 struct LocationsView_Previews: PreviewProvider {
     static var previews: some View {
         LocationsView()

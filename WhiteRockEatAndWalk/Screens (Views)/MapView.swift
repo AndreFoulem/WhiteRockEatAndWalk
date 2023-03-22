@@ -5,10 +5,8 @@
 //  Created by AndreMacBook on 2023-03-20.
 //
 
-
 import SwiftUI
 import MapKit
-
 
 struct MapView: View {
     @State private var westBeach = MKCoordinateRegion(
@@ -34,6 +32,9 @@ struct MapView: View {
     }//body
 }
 
+//
+// Local Components Views
+//
 struct LogoView: View {
   var body: some View {
     Image("ddg-map-logo")
@@ -43,6 +44,9 @@ struct LogoView: View {
   }
 }
 
+//
+// PREVIEW
+//
 struct MapView_Previews: PreviewProvider {
   static var previews: some View {
     MapView()

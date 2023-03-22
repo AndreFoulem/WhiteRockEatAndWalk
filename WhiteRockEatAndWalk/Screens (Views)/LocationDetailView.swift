@@ -31,6 +31,9 @@ struct LocationDetailView: View {
     }//body
 }
 
+  //
+  // Local Variable Views
+  //
 extension LocationDetailView {
   
   var banner: some View {
@@ -112,6 +115,9 @@ extension LocationDetailView {
   
 }
 
+//
+// Local Components Views
+//
 struct LocationActionButton: View {
   var bgColor: Color
   var fillColor: Color
@@ -132,7 +138,9 @@ struct LocationActionButton: View {
   }
 }
 
-
+  //
+  // PREVIEW
+  //
 struct LocationDetailView_Previews: PreviewProvider {
   static var previews: some View {
     NavigationView {
