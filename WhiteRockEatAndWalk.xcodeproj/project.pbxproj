@@ -10,6 +10,9 @@
 		90A8A02429C961760096C833 /* LocationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A8A02329C961760096C833 /* LocationDetailView.swift */; };
 		90A8A02629CA35CE0096C833 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A8A02529CA35CE0096C833 /* AvatarView.swift */; };
 		90A8A02A29CA90E20096C833 /* LocationCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A8A02929CA90E20096C833 /* LocationCellView.swift */; };
+		90A8A02C29CA917E0096C833 /* FirstNameAvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A8A02B29CA917E0096C833 /* FirstNameAvatarView.swift */; };
+		90A8A02F29CA9EDA0096C833 /* ProfileTextField!.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A8A02E29CA9EDA0096C833 /* ProfileTextField!.swift */; };
+		90A8A03129CA9F190096C833 /* View+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A8A03029CA9F190096C833 /* View+.swift */; };
 		90B8DAB229C8FE19002B0DCD /* WhiteRockEatAndWalkApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B8DAB129C8FE19002B0DCD /* WhiteRockEatAndWalkApp.swift */; };
 		90B8DAB429C8FE19002B0DCD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B8DAB329C8FE19002B0DCD /* ContentView.swift */; };
 		90B8DAB629C8FE19002B0DCD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90B8DAB529C8FE19002B0DCD /* Assets.xcassets */; };
@@ -25,6 +28,9 @@
 		90A8A02329C961760096C833 /* LocationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailView.swift; sourceTree = "<group>"; };
 		90A8A02529CA35CE0096C833 /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
 		90A8A02929CA90E20096C833 /* LocationCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCellView.swift; sourceTree = "<group>"; };
+		90A8A02B29CA917E0096C833 /* FirstNameAvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstNameAvatarView.swift; sourceTree = "<group>"; };
+		90A8A02E29CA9EDA0096C833 /* ProfileTextField!.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileTextField!.swift"; sourceTree = "<group>"; };
+		90A8A03029CA9F190096C833 /* View+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+.swift"; sourceTree = "<group>"; };
 		90B8DAAE29C8FE19002B0DCD /* WhiteRockEatAndWalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhiteRockEatAndWalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90B8DAB129C8FE19002B0DCD /* WhiteRockEatAndWalkApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteRockEatAndWalkApp.swift; sourceTree = "<group>"; };
 		90B8DAB329C8FE19002B0DCD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -54,8 +60,17 @@
 			children = (
 				90A8A02529CA35CE0096C833 /* AvatarView.swift */,
 				90A8A02929CA90E20096C833 /* LocationCellView.swift */,
+				90A8A02B29CA917E0096C833 /* FirstNameAvatarView.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		90A8A02D29CA9EB20096C833 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				90A8A02E29CA9EDA0096C833 /* ProfileTextField!.swift */,
+			);
+			path = Modifiers;
 			sourceTree = "<group>";
 		};
 		90B8DAA529C8FE19002B0DCD = {
@@ -84,6 +99,7 @@
 				90B8DAB329C8FE19002B0DCD /* ContentView.swift */,
 				90A8A02229C961680096C833 /* Components */,
 				90B8DAC629C90CC4002B0DCD /* Views */,
+				90A8A02D29CA9EB20096C833 /* Modifiers */,
 				90B8DAC229C9042E002B0DCD /* Extensions */,
 			);
 			path = WhiteRockEatAndWalk;
@@ -101,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				90B8DAC029C90429002B0DCD /* Color+ColorSet.swift */,
+				90A8A03029CA9F190096C833 /* View+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -190,9 +207,12 @@
 				90B8DAB429C8FE19002B0DCD /* ContentView.swift in Sources */,
 				90B8DAC829C912E5002B0DCD /* LocationsView.swift in Sources */,
 				90A8A02429C961760096C833 /* LocationDetailView.swift in Sources */,
+				90A8A02C29CA917E0096C833 /* FirstNameAvatarView.swift in Sources */,
 				90A8A02A29CA90E20096C833 /* LocationCellView.swift in Sources */,
 				90B8DAB229C8FE19002B0DCD /* WhiteRockEatAndWalkApp.swift in Sources */,
+				90A8A02F29CA9EDA0096C833 /* ProfileTextField!.swift in Sources */,
 				90B8DACC29C91314002B0DCD /* MapView.swift in Sources */,
+				90A8A03129CA9F190096C833 /* View+.swift in Sources */,
 				90B8DAC529C90CBE002B0DCD /* AppTabView.swift in Sources */,
 				90B8DACA29C912FF002B0DCD /* ProfileView.swift in Sources */,
 				90A8A02629CA35CE0096C833 /* AvatarView.swift in Sources */,

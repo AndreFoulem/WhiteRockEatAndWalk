@@ -127,17 +127,4 @@ struct LocationActionButton: View {
   }
 }
 
-struct FirstNameAvatarView: View {
-  
-  var firstName: String
-  
-  var body: some View {
-    VStack {
-      AvatarView(size: 64)
-      Text(firstName)
-        .bold()
-        .lineLimit(1)
-        .minimumScaleFactor(0.70)
-    }
-  }
-}
+
