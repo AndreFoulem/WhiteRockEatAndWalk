@@ -12,7 +12,7 @@
 		90A8A02A29CA90E20096C833 /* LocationCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A8A02929CA90E20096C833 /* LocationCellView.swift */; };
 		90A8A02C29CA917E0096C833 /* FirstNameAvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A8A02B29CA917E0096C833 /* FirstNameAvatarView.swift */; };
 		90A8A02F29CA9EDA0096C833 /* ProfileTextField!.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A8A02E29CA9EDA0096C833 /* ProfileTextField!.swift */; };
-		90A8A03129CA9F190096C833 /* View+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A8A03029CA9F190096C833 /* View+.swift */; };
+		90A8A03129CA9F190096C833 /* View+Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A8A03029CA9F190096C833 /* View+Modifiers.swift */; };
 		90B8DAB229C8FE19002B0DCD /* WhiteRockEatAndWalkApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B8DAB129C8FE19002B0DCD /* WhiteRockEatAndWalkApp.swift */; };
 		90B8DAB429C8FE19002B0DCD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B8DAB329C8FE19002B0DCD /* ContentView.swift */; };
 		90B8DAB629C8FE19002B0DCD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90B8DAB529C8FE19002B0DCD /* Assets.xcassets */; };
@@ -30,7 +30,7 @@
 		90A8A02929CA90E20096C833 /* LocationCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCellView.swift; sourceTree = "<group>"; };
 		90A8A02B29CA917E0096C833 /* FirstNameAvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstNameAvatarView.swift; sourceTree = "<group>"; };
 		90A8A02E29CA9EDA0096C833 /* ProfileTextField!.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileTextField!.swift"; sourceTree = "<group>"; };
-		90A8A03029CA9F190096C833 /* View+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+.swift"; sourceTree = "<group>"; };
+		90A8A03029CA9F190096C833 /* View+Modifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Modifiers.swift"; sourceTree = "<group>"; };
 		90B8DAAE29C8FE19002B0DCD /* WhiteRockEatAndWalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhiteRockEatAndWalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90B8DAB129C8FE19002B0DCD /* WhiteRockEatAndWalkApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteRockEatAndWalkApp.swift; sourceTree = "<group>"; };
 		90B8DAB329C8FE19002B0DCD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -58,6 +58,7 @@
 		90A8A02229C961680096C833 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				90B8DAC429C90CBE002B0DCD /* AppTabView.swift */,
 				90A8A02529CA35CE0096C833 /* AvatarView.swift */,
 				90A8A02929CA90E20096C833 /* LocationCellView.swift */,
 				90A8A02B29CA917E0096C833 /* FirstNameAvatarView.swift */,
@@ -117,7 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				90B8DAC029C90429002B0DCD /* Color+ColorSet.swift */,
-				90A8A03029CA9F190096C833 /* View+.swift */,
+				90A8A03029CA9F190096C833 /* View+Modifiers.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -125,7 +126,6 @@
 		90B8DAC629C90CC4002B0DCD /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				90B8DAC429C90CBE002B0DCD /* AppTabView.swift */,
 				90B8DAC729C912E5002B0DCD /* LocationsView.swift */,
 				90A8A02329C961760096C833 /* LocationDetailView.swift */,
 				90B8DACB29C91314002B0DCD /* MapView.swift */,
@@ -212,7 +212,7 @@
 				90B8DAB229C8FE19002B0DCD /* WhiteRockEatAndWalkApp.swift in Sources */,
 				90A8A02F29CA9EDA0096C833 /* ProfileTextField!.swift in Sources */,
 				90B8DACC29C91314002B0DCD /* MapView.swift in Sources */,
-				90A8A03129CA9F190096C833 /* View+.swift in Sources */,
+				90A8A03129CA9F190096C833 /* View+Modifiers.swift in Sources */,
 				90B8DAC529C90CBE002B0DCD /* AppTabView.swift in Sources */,
 				90B8DACA29C912FF002B0DCD /* ProfileView.swift in Sources */,
 				90A8A02629CA35CE0096C833 /* AvatarView.swift in Sources */,

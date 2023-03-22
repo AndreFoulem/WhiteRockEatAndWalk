@@ -1,5 +1,3 @@
-//
-//  ProfileTextFieldModifier.swift
 //  WhiteRockEatAndWalk
 //
 //  Created by AndreMacBook on 2023-03-21.
@@ -7,6 +5,7 @@
 
 import SwiftUI
 
+//! this modifier is extended in View+
 struct ProfileTextField: ViewModifier {
   var mystyle: Font
   

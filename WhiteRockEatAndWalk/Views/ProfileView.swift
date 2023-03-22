@@ -31,9 +31,6 @@ struct ProfileView: View {
 }
 
 
-
-
-
 extension ProfileView {
   private var profileTitle: some View {
     HStack {
