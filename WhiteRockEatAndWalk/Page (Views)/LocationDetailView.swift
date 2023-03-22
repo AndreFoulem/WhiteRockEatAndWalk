@@ -13,66 +13,15 @@ struct LocationDetailView: View {
       
       VStack {
         banner
-        
-          //-> sub banner image Container
+        //-> sub banner image Container
         VStack {
           address
           description
-          ZStack {
-            Capsule()
-              .frame(height: 80)
-              .foregroundColor(.secondary)
-            
-              //-> circle btns
-            HStack(spacing: 16.0) {
-              Button {
-                
-              } label: { LocationActionButton(bgColor: .brandPrimary, fillColor: .white, imageName: "location.fill")
-              }
-              
-              Link(destination: URL(string: "https://www.apple.com")!, label: {
-                LocationActionButton(bgColor: .brandPrimary, fillColor: .white, imageName: "network")
-              })
-              
-              Button {
-                
-              } label: { LocationActionButton(bgColor: .brandPrimary, fillColor: .white, imageName: "phone.fill")
-              }
-              
-              Button {
-                
-              } label: { LocationActionButton(bgColor: .brandPrimary, fillColor: .white, imageName: "person.fill.checkmark",
-                                              iconHeight: 20)
-              }
-            }//hs
-            
-          }//zs
-          
-          
-          Text("what's here")
-            .bold()
-          
-          ScrollView {
-            LazyVGrid(columns: [GridItem(.flexible()),
-                                GridItem(.flexible()),
-                                GridItem(.flexible())]) {
-              FirstNameAvatarView(firstName: "Ice Cream")
-              FirstNameAvatarView(firstName: "Ice milk")
-              FirstNameAvatarView(firstName: "Figh Chips")
-              FirstNameAvatarView(firstName: "Ice Cream")
-              FirstNameAvatarView(firstName: "Ice milk")
-              FirstNameAvatarView(firstName: "Figh Chips")
-              FirstNameAvatarView(firstName: "Ice Cream")
-              FirstNameAvatarView(firstName: "Ice milk")
-              FirstNameAvatarView(firstName: "Figh Chips")
-              FirstNameAvatarView(firstName: "Figh Chips")
-            }
-          }
-          
-          
+          actionStack
+          Text("what's here").bold()
+          foods
           Spacer()
-          
-        }//vs sub-banner container
+        }//vs
         .padding(.horizontal)
         
       }//vs
@@ -110,9 +59,58 @@ extension LocationDetailView {
       .minimumScaleFactor(0.70)
   }
   
+  var actionStack: some View {
+    ZStack {
+      Capsule()
+        .frame(height: 80)
+        .foregroundColor(.secondary)
+      
+        //-> circle btns
+      HStack(spacing: 16.0) {
+        Button {
+          
+        } label: { LocationActionButton(bgColor: .brandPrimary, fillColor: .white, imageName: "location.fill")
+        }
+        
+        Link(destination: URL(string: "https://www.apple.com")!, label: {
+          LocationActionButton(bgColor: .brandPrimary, fillColor: .white, imageName: "network")
+        })
+        
+        Button {
+          
+        } label: { LocationActionButton(bgColor: .brandPrimary, fillColor: .white, imageName: "phone.fill")
+        }
+        
+        Button {
+          
+        } label: { LocationActionButton(bgColor: .brandPrimary, fillColor: .white, imageName: "person.fill.checkmark",
+                                        iconHeight: 20)
+        }
+      }//hs
+      
+    }//zs
+  }
+  
+  var foods: some View {
+    ScrollView {
+      LazyVGrid(columns: [GridItem(.flexible()),
+                          GridItem(.flexible()),
+                          GridItem(.flexible())]) {
+        FirstNameAvatarView(firstName: "Ice Cream")
+        FirstNameAvatarView(firstName: "Ice milk")
+        FirstNameAvatarView(firstName: "Figh Chips")
+        FirstNameAvatarView(firstName: "Ice Cream")
+        FirstNameAvatarView(firstName: "Ice milk")
+        FirstNameAvatarView(firstName: "Figh Chips")
+        FirstNameAvatarView(firstName: "Ice Cream")
+        FirstNameAvatarView(firstName: "Ice milk")
+        FirstNameAvatarView(firstName: "Figh Chips")
+        FirstNameAvatarView(firstName: "Figh Chips")
+      }
+    }
+  }
+  
 }
-
-
 
 struct LocationActionButton: View {
   var bgColor: Color
