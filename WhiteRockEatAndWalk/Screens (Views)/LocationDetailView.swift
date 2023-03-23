@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct LocationDetailView: View {
-    var location: WRLocation
+    var location: EAWLocation
   
     var body: some View {
       
@@ -145,7 +145,7 @@ struct LocationActionButton: View {
 struct LocationDetailView_Previews: PreviewProvider {
   static var previews: some View {
     NavigationView {
-      LocationDetailView(location: WRLocation(record: MockLocation.location))
+      LocationDetailView(location: EAWLocation(record: MockLocation.location))
     }
   }
 }

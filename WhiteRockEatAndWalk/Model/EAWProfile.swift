@@ -9,7 +9,7 @@ import Foundation
 
 import CloudKit
 
-struct WRProfile {
+struct EAWProfile {
   
   static let kFirstName = "firstName"
   static let kLastName = "lastName"
@@ -28,7 +28,7 @@ struct WRProfile {
   let hasReviewed: CKRecord.Reference? = nil
 }
 
-extension WRProfile {
+extension EAWProfile {
   init(record: CKRecord) {
     ckRecordID = record.recordID
     firstName = record[Self.kFirstName] as? String ?? "N/A"

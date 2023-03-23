@@ -8,6 +8,6 @@
 import Foundation
 
 enum RecordType {
-  static let location = "WRLocation"
-  static let profile = "WRProfile"
+  static let location = "EAWLocation"
+  static let profile = "EAWProfile"
 }

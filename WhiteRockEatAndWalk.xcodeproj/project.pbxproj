@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9038003529CBDF3B00EE7444 /* WRLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9038003429CBDF3B00EE7444 /* WRLocation.swift */; };
-		9038003729CBE53300EE7444 /* WRProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9038003629CBE53300EE7444 /* WRProfile.swift */; };
+		9038003529CBDF3B00EE7444 /* EAWLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9038003429CBDF3B00EE7444 /* EAWLocation.swift */; };
+		9038003729CBE53300EE7444 /* EAWProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9038003629CBE53300EE7444 /* EAWProfile.swift */; };
 		9038003929CBE77F00EE7444 /* MockLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9038003829CBE77F00EE7444 /* MockLocation.swift */; };
 		9038003C29CBF7DD00EE7444 /* CKManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9038003B29CBF7DD00EE7444 /* CKManager.swift */; };
 		9038003F29CBF91300EE7444 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9038003E29CBF91300EE7444 /* Constants.swift */; };
@@ -31,8 +31,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9038003429CBDF3B00EE7444 /* WRLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRLocation.swift; sourceTree = "<group>"; };
-		9038003629CBE53300EE7444 /* WRProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRProfile.swift; sourceTree = "<group>"; };
+		9038003429CBDF3B00EE7444 /* EAWLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAWLocation.swift; sourceTree = "<group>"; };
+		9038003629CBE53300EE7444 /* EAWProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAWProfile.swift; sourceTree = "<group>"; };
 		9038003829CBE77F00EE7444 /* MockLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLocation.swift; sourceTree = "<group>"; };
 		9038003B29CBF7DD00EE7444 /* CKManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CKManager.swift; sourceTree = "<group>"; };
 		9038003E29CBF91300EE7444 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -70,8 +70,8 @@
 		9038003329CBDF0600EE7444 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				9038003429CBDF3B00EE7444 /* WRLocation.swift */,
-				9038003629CBE53300EE7444 /* WRProfile.swift */,
+				9038003429CBDF3B00EE7444 /* EAWLocation.swift */,
+				9038003629CBE53300EE7444 /* EAWProfile.swift */,
 				9038003829CBE77F00EE7444 /* MockLocation.swift */,
 			);
 			path = Model;
@@ -257,12 +257,12 @@
 				9038003C29CBF7DD00EE7444 /* CKManager.swift in Sources */,
 				90B8DACC29C91314002B0DCD /* MapView.swift in Sources */,
 				90A8A03629CB665F0096C833 /* ButtonLabelView.swift in Sources */,
-				9038003729CBE53300EE7444 /* WRProfile.swift in Sources */,
+				9038003729CBE53300EE7444 /* EAWProfile.swift in Sources */,
 				90A8A03129CA9F190096C833 /* View+Modifiers.swift in Sources */,
 				90B8DAC529C90CBE002B0DCD /* AppTabView.swift in Sources */,
 				90B8DACA29C912FF002B0DCD /* ProfileView.swift in Sources */,
 				90A8A02629CA35CE0096C833 /* AvatarView.swift in Sources */,
-				9038003529CBDF3B00EE7444 /* WRLocation.swift in Sources */,
+				9038003529CBDF3B00EE7444 /* EAWLocation.swift in Sources */,
 				90B8DAC129C90429002B0DCD /* Color+ColorSet.swift in Sources */,
 				9038003929CBE77F00EE7444 /* MockLocation.swift in Sources */,
 			);

@@ -10,7 +10,7 @@ import SwiftUI
 
 struct LocationCellView: View {
   
-  var location: WRLocation
+  var location: EAWLocation
   
   var body: some View {
     HStack {
@@ -41,6 +41,6 @@ struct LocationCellView: View {
 
 struct LocationCellView_Previews: PreviewProvider {
     static var previews: some View {
-      LocationCellView(location: WRLocation(record:∑ MockLocation.location))
+      LocationCellView(location: EAWLocation(record: MockLocation.location))
     }
 }
