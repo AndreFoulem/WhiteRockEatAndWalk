@@ -7,7 +7,7 @@
 
 import CloudKit
 
-struct WRLocation {
+struct EAWLocation {
   
   static let kName = "name"
   static let kDescription = "description"
