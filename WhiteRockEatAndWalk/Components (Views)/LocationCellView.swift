@@ -41,6 +41,6 @@ struct LocationCellView: View {
 
 struct LocationCellView_Previews: PreviewProvider {
     static var previews: some View {
-      LocationCellView(location: WRLocation(record: MockLocation.location))
+      LocationCellView(location: WRLocation(record:∑ MockLocation.location))
     }
 }
