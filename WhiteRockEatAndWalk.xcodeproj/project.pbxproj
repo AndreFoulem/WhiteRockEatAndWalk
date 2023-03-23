@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9038003529CBDF3B00EE7444 /* EAWLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9038003429CBDF3B00EE7444 /* EAWLocation.swift */; };
+		9038003729CBE53300EE7444 /* EAWProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9038003629CBE53300EE7444 /* EAWProfile.swift */; };
 		90A8A02429C961760096C833 /* LocationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A8A02329C961760096C833 /* LocationDetailView.swift */; };
 		90A8A02629CA35CE0096C833 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A8A02529CA35CE0096C833 /* AvatarView.swift */; };
 		90A8A02A29CA90E20096C833 /* LocationCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A8A02929CA90E20096C833 /* LocationCellView.swift */; };
@@ -28,6 +29,7 @@
 
 /* Begin PBXFileReference section */
 		9038003429CBDF3B00EE7444 /* EAWLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAWLocation.swift; sourceTree = "<group>"; };
+		9038003629CBE53300EE7444 /* EAWProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAWProfile.swift; sourceTree = "<group>"; };
 		90A8A02329C961760096C833 /* LocationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailView.swift; sourceTree = "<group>"; };
 		90A8A02529CA35CE0096C833 /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
 		90A8A02929CA90E20096C833 /* LocationCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCellView.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				9038003429CBDF3B00EE7444 /* EAWLocation.swift */,
+				9038003629CBE53300EE7444 /* EAWProfile.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 				90A8A02F29CA9EDA0096C833 /* ProfileTextField!.swift in Sources */,
 				90B8DACC29C91314002B0DCD /* MapView.swift in Sources */,
 				90A8A03629CB665F0096C833 /* ButtonLabelView.swift in Sources */,
+				9038003729CBE53300EE7444 /* EAWProfile.swift in Sources */,
 				90A8A03129CA9F190096C833 /* View+Modifiers.swift in Sources */,
 				90B8DAC529C90CBE002B0DCD /* AppTabView.swift in Sources */,
 				90B8DACA29C912FF002B0DCD /* ProfileView.swift in Sources */,
