@@ -16,6 +16,7 @@ struct MockLocation {
     record[WRLocation.kDescription] = "this is my descriptiointhis is my descriptiointhis is my descriptioin"
     record[WRLocation.kWebsite] = "www.google.ca"
     record[WRLocation.kLocation] = CLLocation(latitude: 49.019380, longitude: -122.791546)
+    record[WRLocation.kPhone] = "12223334444"
     
     return record
   }
