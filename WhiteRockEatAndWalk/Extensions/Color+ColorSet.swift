@@ -8,7 +8,7 @@
 import SwiftUI
 
 extension Color {
-  static let brandPrimary = Color("brandPrimary")
+  static let brandPrimary = Color.accentColor
 }
 
 

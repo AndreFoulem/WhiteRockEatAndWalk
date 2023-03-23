@@ -83,7 +83,7 @@ extension ProfileView {
         .foregroundColor(.secondary)
       +
       Text("\(100 - biography.count)")
-        .foregroundColor(biography.count <= 100 ? .brandPrimary : .pink)
+        .foregroundColor(biography.count <= 100 ? .primary : .pink)
         .fontWeight(.black)
       +
       Text(" Characters of less")

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ButtonLabel: View {
     var label: String
-    var bgColor: Color = Color.brandPrimary
+    var bgColor: Color = Color.accentColor
     var width: CGFloat = 280
     var height: CGFloat = 44
   

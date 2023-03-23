@@ -52,7 +52,7 @@ extension LocationDetailView {
         .foregroundColor(.gray)
       
       Image(systemName:"arrowshape.turn.up.backward.circle.fill")
-        .foregroundColor(.brandPrimary)
+        .foregroundColor(.primary)
     }
     .padding(.vertical, 2)
   }
@@ -73,21 +73,21 @@ extension LocationDetailView {
       HStack(spacing: 16.0) {
         Button {
           
-        } label: { LocationActionButton(bgColor: .brandPrimary, fillColor: .white, imageName: "location.fill")
+        } label: { LocationActionButton(bgColor: .accentColor, fillColor: .white, imageName: "location.fill")
         }
         
         Link(destination: URL(string: location.website)!, label: {
-          LocationActionButton(bgColor: .brandPrimary, fillColor: .white, imageName: "network")
+          LocationActionButton(bgColor: .accentColor, fillColor: .white, imageName: "network")
         })
         
         Button {
           
-        } label: { LocationActionButton(bgColor: .brandPrimary, fillColor: .white, imageName: "phone.fill")
+        } label: { LocationActionButton(bgColor: .accentColor, fillColor: .white, imageName: "phone.fill")
         }
         
         Button {
           
-        } label: { LocationActionButton(bgColor: .brandPrimary, fillColor: .white, imageName: "person.fill.checkmark",
+        } label: { LocationActionButton(bgColor: .accentColor, fillColor: .white, imageName: "person.fill.checkmark",
                                         iconHeight: 20)
         }
       }//hs

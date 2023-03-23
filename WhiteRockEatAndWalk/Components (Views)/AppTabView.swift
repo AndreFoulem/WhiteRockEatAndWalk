@@ -23,7 +23,7 @@ struct AppTabView: View {
             Label("Profile", systemImage: "person")
           }
       
-      }.accentColor(.brandPrimary)
+      }
     }
   
 }
