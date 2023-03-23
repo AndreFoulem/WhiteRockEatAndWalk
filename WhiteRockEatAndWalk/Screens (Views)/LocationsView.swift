@@ -9,13 +9,15 @@ import SwiftUI
 //! import LocationCellView
 
 struct LocationsView: View {
-    var body: some View {
+  @State private var locations: [WRLocation] = [WRLocation(record: MockLocation.location)]
+  
+  
+  var body: some View {
       NavigationView {
         List {
-          ForEach(0..<10) { _ in
-            
-            NavigationLink(destination: LocationDetailView()) {
-              LocationCellView()
+          ForEach(locations,id: \.ckRecordID) { location in
+            NavigationLink(destination: LocationDetailView(location: location)) {
+              LocationCellView(location: location)
             }//hs
           }
         }

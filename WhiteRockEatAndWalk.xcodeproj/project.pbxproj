@@ -10,6 +10,8 @@
 		9038003529CBDF3B00EE7444 /* WRLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9038003429CBDF3B00EE7444 /* WRLocation.swift */; };
 		9038003729CBE53300EE7444 /* WRProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9038003629CBE53300EE7444 /* WRProfile.swift */; };
 		9038003929CBE77F00EE7444 /* MockLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9038003829CBE77F00EE7444 /* MockLocation.swift */; };
+		9038003C29CBF7DD00EE7444 /* CKManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9038003B29CBF7DD00EE7444 /* CKManager.swift */; };
+		9038003F29CBF91300EE7444 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9038003E29CBF91300EE7444 /* Constants.swift */; };
 		90A8A02429C961760096C833 /* LocationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A8A02329C961760096C833 /* LocationDetailView.swift */; };
 		90A8A02629CA35CE0096C833 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A8A02529CA35CE0096C833 /* AvatarView.swift */; };
 		90A8A02A29CA90E20096C833 /* LocationCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A8A02929CA90E20096C833 /* LocationCellView.swift */; };
@@ -32,6 +34,8 @@
 		9038003429CBDF3B00EE7444 /* WRLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRLocation.swift; sourceTree = "<group>"; };
 		9038003629CBE53300EE7444 /* WRProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRProfile.swift; sourceTree = "<group>"; };
 		9038003829CBE77F00EE7444 /* MockLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLocation.swift; sourceTree = "<group>"; };
+		9038003B29CBF7DD00EE7444 /* CKManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CKManager.swift; sourceTree = "<group>"; };
+		9038003E29CBF91300EE7444 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		90A8A02329C961760096C833 /* LocationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailView.swift; sourceTree = "<group>"; };
 		90A8A02529CA35CE0096C833 /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
 		90A8A02929CA90E20096C833 /* LocationCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCellView.swift; sourceTree = "<group>"; };
@@ -71,6 +75,22 @@
 				9038003829CBE77F00EE7444 /* MockLocation.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		9038003A29CBF7C000EE7444 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				9038003B29CBF7DD00EE7444 /* CKManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		9038003D29CBF8FD00EE7444 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				9038003E29CBF91300EE7444 /* Constants.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		90A8A02229C961680096C833 /* Components (Views) */ = {
@@ -120,8 +140,10 @@
 				9038003329CBDF0600EE7444 /* Model */,
 				90A8A02229C961680096C833 /* Components (Views) */,
 				90B8DAC629C90CC4002B0DCD /* Screens (Views) */,
+				9038003A29CBF7C000EE7444 /* Managers */,
 				90A8A02D29CA9EB20096C833 /* Modifiers */,
 				90B8DAC229C9042E002B0DCD /* Extensions */,
+				9038003D29CBF8FD00EE7444 /* Utilities */,
 			);
 			path = WhiteRockEatAndWalk;
 			sourceTree = "<group>";
@@ -225,12 +247,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				90B8DAB429C8FE19002B0DCD /* ContentView.swift in Sources */,
+				9038003F29CBF91300EE7444 /* Constants.swift in Sources */,
 				90B8DAC829C912E5002B0DCD /* LocationsView.swift in Sources */,
 				90A8A02429C961760096C833 /* LocationDetailView.swift in Sources */,
 				90A8A02C29CA917E0096C833 /* FirstNameAvatarView.swift in Sources */,
 				90A8A02A29CA90E20096C833 /* LocationCellView.swift in Sources */,
 				90B8DAB229C8FE19002B0DCD /* WhiteRockEatAndWalkApp.swift in Sources */,
 				90A8A02F29CA9EDA0096C833 /* ProfileTextField!.swift in Sources */,
+				9038003C29CBF7DD00EE7444 /* CKManager.swift in Sources */,
 				90B8DACC29C91314002B0DCD /* MapView.swift in Sources */,
 				90A8A03629CB665F0096C833 /* ButtonLabelView.swift in Sources */,
 				9038003729CBE53300EE7444 /* WRProfile.swift in Sources */,

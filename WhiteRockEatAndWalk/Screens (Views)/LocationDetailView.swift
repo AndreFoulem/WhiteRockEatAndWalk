@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct LocationDetailView: View {
+    var location: WRLocation
   
     var body: some View {
       
@@ -45,7 +46,7 @@ extension LocationDetailView {
   
   var address: some View {
     HStack {
-      Label("123 Main Street", systemImage: "mappin.and.ellipse")
+      Label(location.address, systemImage: "mappin.and.ellipse")
         .font(.caption)
         .underline()
         .foregroundColor(.gray)
@@ -57,7 +58,7 @@ extension LocationDetailView {
   }
   
   var description: some View {
-    Text("This is a description of a description of a restaurant it is the best place of the world  description of a description of a restaurant it is the best place of the world")
+    Text(location.description)
       .lineLimit(3)
       .minimumScaleFactor(0.70)
   }
@@ -75,7 +76,7 @@ extension LocationDetailView {
         } label: { LocationActionButton(bgColor: .brandPrimary, fillColor: .white, imageName: "location.fill")
         }
         
-        Link(destination: URL(string: "https://www.apple.com")!, label: {
+        Link(destination: URL(string: location.website)!, label: {
           LocationActionButton(bgColor: .brandPrimary, fillColor: .white, imageName: "network")
         })
         
@@ -144,7 +145,7 @@ struct LocationActionButton: View {
 struct LocationDetailView_Previews: PreviewProvider {
   static var previews: some View {
     NavigationView {
-      LocationDetailView()
+      LocationDetailView(location: WRLocation(record: MockLocation.location))
     }
   }
 }

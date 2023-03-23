@@ -10,6 +10,8 @@ import SwiftUI
 
 struct LocationCellView: View {
   
+  var location: WRLocation
+  
   var body: some View {
     HStack {
       Image("default-square-asset")
@@ -20,7 +22,7 @@ struct LocationCellView: View {
         .padding(.vertical, 8)
       
       VStack(alignment: .leading) {
-        Text("item")
+        Text(location.name)
           .font(.title3)
           .fontWeight(.semibold)
         
@@ -39,6 +41,6 @@ struct LocationCellView: View {
 
 struct LocationCellView_Previews: PreviewProvider {
     static var previews: some View {
-        LocationCellView()
+      LocationCellView(location: WRLocation(record: MockLocation.location))
     }
 }
