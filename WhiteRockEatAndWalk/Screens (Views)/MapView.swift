@@ -16,6 +16,9 @@ struct MapView: View {
     @State private var eastBeach = MKCoordinateRegion(
       center: CLLocationCoordinate2D(latitude: 49.0160, longitude: -122.7895),
       span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
+    
+  @State private(set) var alertItem: AlertItem?
+  
   
     var body: some View {
       ZStack {
@@ -28,14 +31,20 @@ struct MapView: View {
         }
         
       }//zs
+      .alert(item: $alertItem, content: { alertItem in
+        Alert(title: alertItem.title,
+              message: alertItem.message,
+              dismissButton: alertItem.dismissBtn
+        )
+      })
       .onAppear {
         CKManager.fetchLocations { result in
           switch result {
               
             case .success(let locations):
               print(locations)
-            case .failure(let error):
-              print(error.localizedDescription)
+            case .failure(_):
+              alertItem = AlertContext.unableToGetLocations
           }
         }
       }
