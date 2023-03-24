@@ -30,6 +30,7 @@
 		90B8DAC829C912E5002B0DCD /* LocationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B8DAC729C912E5002B0DCD /* LocationsView.swift */; };
 		90B8DACA29C912FF002B0DCD /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B8DAC929C912FF002B0DCD /* ProfileView.swift */; };
 		90B8DACC29C91314002B0DCD /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B8DACB29C91314002B0DCD /* MapView.swift */; };
+		90DDC2D629CE2560004D17F3 /* MapVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DDC2D529CE2560004D17F3 /* MapVM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +60,7 @@
 		90B8DAC729C912E5002B0DCD /* LocationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsView.swift; sourceTree = "<group>"; };
 		90B8DAC929C912FF002B0DCD /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		90B8DACB29C91314002B0DCD /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		90DDC2D529CE2560004D17F3 /* MapVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 				90B8DAB129C8FE19002B0DCD /* WhiteRockEatAndWalkApp.swift */,
 				90B8DAB329C8FE19002B0DCD /* ContentView.swift */,
 				9038003329CBDF0600EE7444 /* Model */,
+				90DDC2D429CE2521004D17F3 /* View Model */,
 				90A8A02229C961680096C833 /* Components (Views) */,
 				90B8DAC629C90CC4002B0DCD /* Screens (Views) */,
 				9038003A29CBF7C000EE7444 /* Managers */,
@@ -182,6 +185,14 @@
 				90B8DAC929C912FF002B0DCD /* ProfileView.swift */,
 			);
 			path = "Screens (Views)";
+			sourceTree = "<group>";
+		};
+		90DDC2D429CE2521004D17F3 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				90DDC2D529CE2560004D17F3 /* MapVM.swift */,
+			);
+			path = "View Model";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,6 +280,7 @@
 				90A8A03629CB665F0096C833 /* ButtonLabelView.swift in Sources */,
 				9038003729CBE53300EE7444 /* EAWProfile.swift in Sources */,
 				90A8A03129CA9F190096C833 /* View+Modifiers.swift in Sources */,
+				90DDC2D629CE2560004D17F3 /* MapVM.swift in Sources */,
 				90B8DAC529C90CBE002B0DCD /* AppTabView.swift in Sources */,
 				90B8DACA29C912FF002B0DCD /* ProfileView.swift in Sources */,
 				90A8A02629CA35CE0096C833 /* AvatarView.swift in Sources */,
