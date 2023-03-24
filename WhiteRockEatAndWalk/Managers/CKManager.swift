@@ -11,26 +11,29 @@ struct CKManager {
   
   static func fetchLocations(completed: @escaping (Result<[EAWLocation], Error>) -> Void) {
     
+    // Init NSSortDescriptor
     let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
-    let query = CKQuery(recordType: RecordType.location, predicate: NSPredicate(value: true))
+    // Init CKQuery
+    let query = CKQuery(recordType: "EAWLocation", predicate: NSPredicate(value: true))
+    // Add NSSortDescriptor to CKQuery
     query.sortDescriptors = [sortDescriptor]
     
-//    -> NON ASYNC/AWAIT with Completion
+//    -> NON ASYNC/AWAIT with Completion :: Fetch with CKQuery
     CKContainer.default().publicCloudDatabase.perform(query, inZoneWith: nil) { records, error in
+      
+      // Handle error
       guard error == nil else {
         completed(.failure(error!))
         return
       }
 
+      // Do we have records?
       guard let records = records else { return }
 
-      var locations: [EAWLocation] = []
+      
+      let locations = records.map { $0.convertToEAWLocation() }
 
-      for record in records {
-        let location = EAWLocation(record: record)
-        locations.append(location)
-      }
-
+      // Completed ** like return locations
       completed(.success(locations))
     }
 
