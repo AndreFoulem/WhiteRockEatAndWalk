@@ -11,7 +11,7 @@ struct LocationDetailView: View {
     var location: EAWLocation
   
     var body: some View {
-      
+      //
       VStack {
         banner
         //-> sub banner image Container
