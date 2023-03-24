@@ -13,6 +13,7 @@
 		9038003C29CBF7DD00EE7444 /* CKManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9038003B29CBF7DD00EE7444 /* CKManager.swift */; };
 		9038003F29CBF91300EE7444 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9038003E29CBF91300EE7444 /* Constants.swift */; };
 		90A7071E29CE181700293D82 /* CKRecord+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A7071D29CE181700293D82 /* CKRecord+.swift */; };
+		90A7072029CE1A0900293D82 /* AlertItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A7071F29CE1A0900293D82 /* AlertItem.swift */; };
 		90A8A02429C961760096C833 /* LocationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A8A02329C961760096C833 /* LocationDetailView.swift */; };
 		90A8A02629CA35CE0096C833 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A8A02529CA35CE0096C833 /* AvatarView.swift */; };
 		90A8A02A29CA90E20096C833 /* LocationCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A8A02929CA90E20096C833 /* LocationCellView.swift */; };
@@ -39,6 +40,7 @@
 		9038003E29CBF91300EE7444 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9080DFFF29CC061D00DD7887 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		90A7071D29CE181700293D82 /* CKRecord+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CKRecord+.swift"; sourceTree = "<group>"; };
+		90A7071F29CE1A0900293D82 /* AlertItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertItem.swift; sourceTree = "<group>"; };
 		90A8A02329C961760096C833 /* LocationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailView.swift; sourceTree = "<group>"; };
 		90A8A02529CA35CE0096C833 /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
 		90A8A02929CA90E20096C833 /* LocationCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCellView.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				9038003E29CBF91300EE7444 /* Constants.swift */,
+				90A7071F29CE1A0900293D82 /* AlertItem.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 				90A8A02429C961760096C833 /* LocationDetailView.swift in Sources */,
 				90A8A02C29CA917E0096C833 /* FirstNameAvatarView.swift in Sources */,
 				90A8A02A29CA90E20096C833 /* LocationCellView.swift in Sources */,
+				90A7072029CE1A0900293D82 /* AlertItem.swift in Sources */,
 				90B8DAB229C8FE19002B0DCD /* WhiteRockEatAndWalkApp.swift in Sources */,
 				90A8A02F29CA9EDA0096C833 /* ProfileTextField!.swift in Sources */,
 				9038003C29CBF7DD00EE7444 /* CKManager.swift in Sources */,
