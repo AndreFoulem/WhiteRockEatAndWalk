@@ -9,13 +9,16 @@ import SwiftUI
 import MapKit
 
 struct MapView: View {
-  
+  @EnvironmentObject private var locationManager: LocationManager
   @StateObject private var vm = MapVM()
 
     var body: some View {
       ZStack {
         
-        Map(coordinateRegion: $vm.westBeach).ignoresSafeArea()
+        Map(coordinateRegion: $vm.eastBeach, annotationItems: locationManager.locations) { location in
+          MapMarker(coordinate: location.location.coordinate, tint: .accentColor)
+        }
+//        Map(coordinateRegion: $vm.westBeach).ignoresSafeArea()
         
         VStack {
           LogoView()
@@ -30,7 +33,9 @@ struct MapView: View {
         )
       })
       .onAppear {
-        vm.fetchLocations()
+        if locationManager.locations.isEmpty {
+          vm.fetchLocations(for: locationManager)
+        }
       }
       
     }//body

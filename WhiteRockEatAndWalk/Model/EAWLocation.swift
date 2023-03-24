@@ -7,7 +7,9 @@
 
 import CloudKit
 
-struct EAWLocation {
+struct EAWLocation: Identifiable {
+  
+  let id = UUID()
   
   static let kName = "name"
   static let kDescription = "description"

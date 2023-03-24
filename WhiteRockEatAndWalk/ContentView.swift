@@ -8,10 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
+  
+    let locationManager = LocationManager()
+  
     var body: some View {
       
       ZStack {
           AppTabView()
+          .environmentObject(locationManager)
       }
       
     }//body
