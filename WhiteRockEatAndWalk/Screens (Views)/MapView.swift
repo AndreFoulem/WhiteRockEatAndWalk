@@ -9,21 +9,13 @@ import SwiftUI
 import MapKit
 
 struct MapView: View {
-    @State private var westBeach = MKCoordinateRegion(
-      center: CLLocationCoordinate2D(latitude: 49.0230, longitude: -122.8087),
-      span: MKCoordinateSpan(latitudeDelta: 0.008, longitudeDelta: 0.008))
-    
-    @State private var eastBeach = MKCoordinateRegion(
-      center: CLLocationCoordinate2D(latitude: 49.0160, longitude: -122.7895),
-      span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
-    
-  @State private(set) var alertItem: AlertItem?
   
-  
+  @StateObject private var vm = MapVM()
+
     var body: some View {
       ZStack {
         
-        Map(coordinateRegion: $westBeach).ignoresSafeArea()
+        Map(coordinateRegion: $vm.westBeach).ignoresSafeArea()
         
         VStack {
           LogoView()
@@ -31,22 +23,14 @@ struct MapView: View {
         }
         
       }//zs
-      .alert(item: $alertItem, content: { alertItem in
+      .alert(item: $vm.alertItem, content: { alertItem in
         Alert(title: alertItem.title,
               message: alertItem.message,
               dismissButton: alertItem.dismissBtn
         )
       })
       .onAppear {
-        CKManager.fetchLocations { result in
-          switch result {
-              
-            case .success(let locations):
-              print(locations)
-            case .failure(_):
-              alertItem = AlertContext.unableToGetLocations
-          }
-        }
+        vm.fetchLocations()
       }
       
     }//body
