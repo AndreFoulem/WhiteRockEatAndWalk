@@ -14,7 +14,7 @@ struct LocationCellView: View {
   
   var body: some View {
     HStack {
-      Image("default-square-asset")
+      Image(uiImage: location.createSquareImage())
         .resizable()
         .scaledToFit()
         .frame(height: 80)

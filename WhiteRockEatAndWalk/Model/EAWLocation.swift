@@ -6,6 +6,7 @@
 //
 
 import CloudKit
+import UIKit
 
 struct EAWLocation: Identifiable {
   
@@ -44,6 +45,16 @@ struct EAWLocation: Identifiable {
     squareImage = record[Self.kSquareImage] as? CKAsset
     bannerImage = record[Self.kBannerImage] as? CKAsset
     location = record[Self.kLocation] as? CLLocation ?? CLLocation(latitude: 0, longitude: 0)
+  }
+  
+  func createSquareImage() -> UIImage {
+    guard let asset = squareImage else { return PlaceHolderImage.squareImg! }
+    return asset.convertToUIImage(in: .square)
+  }
+  
+  var bannerImg: UIImage {
+    guard let asset = bannerImage else { return PlaceHolderImage.bannerImg! }
+    return asset.convertToUIImage(in: .banner)
   }
   
 }
