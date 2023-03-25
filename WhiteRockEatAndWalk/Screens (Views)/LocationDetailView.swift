@@ -38,10 +38,10 @@ struct LocationDetailView: View {
 extension LocationDetailView {
   
   var banner: some View {
-    Image("default-banner-asset")
-      .resizable()
-      .scaledToFill()
-      .frame(height: 150)
+      Image(uiImage: location.bannerImg)
+        .resizable()
+        .scaledToFit()
+        .frame(maxWidth: .infinity)
   }
   
   var address: some View {
