@@ -21,7 +21,7 @@ enum PlaceHolderImage {
 enum ImageDimension {
   case square, banner
   
-  func getPlaceHolderUIImage(for dimension: ImageDimension) -> UIImage {
+  static func getPlaceHolderUIImage(for dimension: ImageDimension) -> UIImage {
     switch dimension {
       case .square:
         return PlaceHolderImage.squareImg!

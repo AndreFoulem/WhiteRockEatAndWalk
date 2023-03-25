@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		901E107329CFA5690030A8F1 /* CKAsset+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901E107229CFA5690030A8F1 /* CKAsset+.swift */; };
 		9038003529CBDF3B00EE7444 /* EAWLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9038003429CBDF3B00EE7444 /* EAWLocation.swift */; };
 		9038003729CBE53300EE7444 /* EAWProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9038003629CBE53300EE7444 /* EAWProfile.swift */; };
 		9038003929CBE77F00EE7444 /* MockLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9038003829CBE77F00EE7444 /* MockLocation.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		901E107229CFA5690030A8F1 /* CKAsset+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CKAsset+.swift"; sourceTree = "<group>"; };
 		9038003429CBDF3B00EE7444 /* EAWLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAWLocation.swift; sourceTree = "<group>"; };
 		9038003629CBE53300EE7444 /* EAWProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAWProfile.swift; sourceTree = "<group>"; };
 		9038003829CBE77F00EE7444 /* MockLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLocation.swift; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 				90B8DAC029C90429002B0DCD /* Color+ColorSet.swift */,
 				90A8A03029CA9F190096C833 /* View+Modifiers.swift */,
 				90A7071D29CE181700293D82 /* CKRecord+.swift */,
+				901E107229CFA5690030A8F1 /* CKAsset+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 			files = (
 				90B8DAB429C8FE19002B0DCD /* ContentView.swift in Sources */,
 				9038003F29CBF91300EE7444 /* Constants.swift in Sources */,
+				901E107329CFA5690030A8F1 /* CKAsset+.swift in Sources */,
 				90A7071E29CE181700293D82 /* CKRecord+.swift in Sources */,
 				90B8DAC829C912E5002B0DCD /* LocationsView.swift in Sources */,
 				90A8A02429C961760096C833 /* LocationDetailView.swift in Sources */,
