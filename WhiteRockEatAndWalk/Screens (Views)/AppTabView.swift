@@ -22,10 +22,10 @@ struct AppTabView: View {
           .tabItem {
             Label("Profile", systemImage: "person")
           }
-      
       }
+
+
     }
-  
 }
 
 struct AppTabView_Previews: PreviewProvider {

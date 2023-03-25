@@ -17,9 +17,8 @@ struct MapView: View {
         
         Map(coordinateRegion: $vm.eastBeach, annotationItems: locationManager.locations) { location in
           MapMarker(coordinate: location.location.coordinate, tint: .accentColor)
-        }
-//        Map(coordinateRegion: $vm.westBeach).ignoresSafeArea()
-        
+        }.edgesIgnoringSafeArea(.top)
+
         VStack {
           LogoView()
           Spacer()

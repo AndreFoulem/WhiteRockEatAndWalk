@@ -26,8 +26,8 @@ struct LocationDetailView: View {
         .padding(.horizontal)
         
       }//vs
-      .navigationTitle("name")
-      .navigationBarTitleDisplayMode(.inline)
+      .navigationTitle(location.name)
+      .navigationBarTitleDisplayMode(.automatic)
       
     }//body
 }
@@ -58,9 +58,11 @@ extension LocationDetailView {
   }
   
   var description: some View {
-    Text(location.description)
-      .lineLimit(3)
-      .minimumScaleFactor(0.70)
+    VStack {
+      Text(location.description)
+        .lineLimit(3)
+        .minimumScaleFactor(0.70)
+    }
   }
   
   var actionStack: some View {

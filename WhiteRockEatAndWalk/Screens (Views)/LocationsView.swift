@@ -9,20 +9,22 @@ import SwiftUI
 //! import LocationCellView
 
 struct LocationsView: View {
-  @State private var locations: [EAWLocation] = [EAWLocation(record: MockLocation.location)]
-  
+
+  @EnvironmentObject private var locationManager: LocationManager
   
   var body: some View {
       NavigationView {
         List {
-          ForEach(locations,id: \.ckRecordID) { location in
+          ForEach(locationManager.locations,id: \.ckRecordID) { location in
             NavigationLink(destination: LocationDetailView(location: location)) {
               LocationCellView(location: location)
             }//hs
           }
         }
-        .navigationTitle("Ice Cream")
+        .navigationTitle("Locations")
+   
       }//nv
+ 
       
     }//body
 }
