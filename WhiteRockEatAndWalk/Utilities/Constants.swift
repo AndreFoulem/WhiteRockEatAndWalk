@@ -18,4 +18,15 @@ enum PlaceHolderImage {
   static let bannerImg = UIImage(named: "default-banner-asset")
 }
 
-
+enum ImageDimension {
+  case square, banner
+  
+  func getPlaceHolderUIImage(for dimension: ImageDimension) -> UIImage {
+    switch dimension {
+      case .square:
+        return PlaceHolderImage.squareImg!
+      case .banner:
+        return PlaceHolderImage.bannerImg!
+    }
+  }
+}
