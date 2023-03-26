@@ -22,11 +22,11 @@ final class MapVM: NSObject, ObservableObject {
   
   func checkIfLocationServicesIsEnabled() {
     if CLLocationManager.locationServicesEnabled() {
+      // Init the CLLocationManager Instance
       deviceLocationManager = CLLocationManager()
       //-> Accuracy Best is the default
       deviceLocationManager?.desiredAccuracy = kCLLocationAccuracyBest
-      
-      checkAppLocationAuthorization()
+ 
     } else {
       alertItem = AlertContext.deviceLocationDisabled
     }
@@ -67,5 +67,8 @@ final class MapVM: NSObject, ObservableObject {
 
 extension MapVM: CLLocationManagerDelegate {
     //-> Handle location services changes
+  func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+    checkAppLocationAuthorization()
+  }
   
 }

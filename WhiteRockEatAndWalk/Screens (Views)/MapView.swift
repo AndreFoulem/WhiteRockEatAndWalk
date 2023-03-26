@@ -32,6 +32,8 @@ struct MapView: View {
         )
       })
       .onAppear {
+        vm.checkIfLocationServicesIsEnabled()
+        
         if locationManager.locations.isEmpty {
           vm.fetchLocations(for: locationManager)
         }
