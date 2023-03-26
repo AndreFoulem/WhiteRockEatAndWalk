@@ -7,7 +7,7 @@
 
 import MapKit
 
-final class MapVM: ObservableObject {
+final class MapVM: ObservableObject, NSObject {
   @Published var alertItem: AlertItem?
   
   @Published var westBeach = MKCoordinateRegion(
@@ -25,20 +25,24 @@ final class MapVM: ObservableObject {
       deviceLocationManager = CLLocationManager()
       //-> Accuracy Best is the default
       deviceLocationManager?.desiredAccuracy = kCLLocationAccuracyBest
+      
+      checkAppLocationAuthorization()
+    } else {
+      alertItem = AlertContext.deviceLocationDisabled
     }
   }
   
-  func checkAppLocationAuthorization() {
+  private func checkAppLocationAuthorization() {
     guard let deviceLocationManager else { return }
     
     switch deviceLocationManager.authorizationStatus {
       case .notDetermined:
         deviceLocationManager.requestWhenInUseAuthorization()
       case .restricted:
-        // show alert
+        alertItem = AlertContext.deviceLocationRestricted
       case .denied:
-        // show alert
-      case .authorizedAlways. .authorizedWhenInUse:
+        alertItem = AlertContext.deviceLocationDenied
+      case .authorizedAlways, .authorizedWhenInUse:
         break
       @unknown default:
         break
@@ -58,4 +62,10 @@ final class MapVM: ObservableObject {
       }
     }
   }
+}
+
+
+extension MapVM {
+    //-> Handle location services changes
+  
 }

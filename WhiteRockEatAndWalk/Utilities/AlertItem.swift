@@ -20,5 +20,17 @@ struct AlertContext {
   static let unableToGetLocations = AlertItem(title: Text("Locations Error"),
                                               message: Text("Unable to get location"),
                                               dismissBtn: .default(Text("OK")))
+
+  static let deviceLocationRestricted = AlertItem(title: Text("Locations restricted"),
+                                              message: Text("You're location is restricted. May be due to parental controls"),
+                                              dismissBtn: .default(Text("OK")))
+
+  static let deviceLocationDenied = AlertItem(title: Text("Location access denied"),
+                                              message: Text("We do not have access to your location. To enable location access go to Settings > WhiteRockEatAndWalk"),
+                                              dismissBtn: .default(Text("OK")))
+  
+  static let deviceLocationDisabled = AlertItem(title: Text("Location access disabled"),
+                                              message: Text("Your phone location services is enabled. To enable location access go to Settings > Privacy > Location Services"),
+                                              dismissBtn: .default(Text("OK")))
 }
 
