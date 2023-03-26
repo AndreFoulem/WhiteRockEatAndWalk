@@ -7,7 +7,7 @@
 
 import MapKit
 
-final class MapVM: NSObject, ObservableObject,  {
+final class MapVM: NSObject, ObservableObject {
   @Published var alertItem: AlertItem?
   
   @Published var westBeach = MKCoordinateRegion(
@@ -65,7 +65,7 @@ final class MapVM: NSObject, ObservableObject,  {
 }
 
 
-extension MapVM {
+extension MapVM: CLLocationManagerDelegate {
     //-> Handle location services changes
   
 }
