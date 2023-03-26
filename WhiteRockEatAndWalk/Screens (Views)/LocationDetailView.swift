@@ -28,7 +28,6 @@ struct LocationDetailView: View {
       }//vs
       .navigationTitle(location.name)
       .navigationBarTitleDisplayMode(.automatic)
-      
     }//body
 }
 
@@ -42,6 +41,7 @@ extension LocationDetailView {
         .resizable()
         .scaledToFit()
         .frame(maxWidth: .infinity)
+  
   }
   
   var address: some View {

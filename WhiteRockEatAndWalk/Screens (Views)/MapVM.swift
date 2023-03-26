@@ -18,6 +18,34 @@ final class MapVM: ObservableObject {
     center: CLLocationCoordinate2D(latitude: 49.0160, longitude: -122.7895),
     span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
   
+  var deviceLocationManager: CLLocationManager?
+  
+  func checkIfLocationServicesIsEnabled() {
+    if CLLocationManager.locationServicesEnabled() {
+      deviceLocationManager = CLLocationManager()
+      //-> Accuracy Best is the default
+      deviceLocationManager?.desiredAccuracy = kCLLocationAccuracyBest
+    }
+  }
+  
+  func checkAppLocationAuthorization() {
+    guard let deviceLocationManager else { return }
+    
+    switch deviceLocationManager.authorizationStatus {
+      case .notDetermined:
+        deviceLocationManager.requestWhenInUseAuthorization()
+      case .restricted:
+        // show alert
+      case .denied:
+        // show alert
+      case .authorizedAlways. .authorizedWhenInUse:
+        break
+      @unknown default:
+        break
+    }
+    
+  }
+  
   func fetchLocations(for locationManager: LocationManager) {
     CKManager.fetchLocations { [self] result in
       DispatchQueue.main.async {

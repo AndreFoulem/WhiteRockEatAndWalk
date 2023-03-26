@@ -78,6 +78,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		901E107529CFE9B70030A8F1 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		9038003329CBDF0600EE7444 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -157,6 +164,7 @@
 				90A8A02D29CA9EB20096C833 /* Modifiers */,
 				90B8DAC229C9042E002B0DCD /* Extensions */,
 				9038003D29CBF8FD00EE7444 /* Utilities */,
+				901E107529CFE9B70030A8F1 /* Protocols */,
 			);
 			path = WhiteRockEatAndWalk;
 			sourceTree = "<group>";

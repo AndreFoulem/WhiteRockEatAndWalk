@@ -15,7 +15,7 @@ struct MapView: View {
     var body: some View {
       ZStack {
         
-        Map(coordinateRegion: $vm.eastBeach, annotationItems: locationManager.locations) { location in
+        Map(coordinateRegion: $vm.eastBeach, showsUserLocation: true, annotationItems: locationManager.locations) { location in
           MapMarker(coordinate: location.location.coordinate, tint: .accentColor)
         }.edgesIgnoringSafeArea(.top)
 
