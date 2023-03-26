@@ -7,7 +7,7 @@
 
 import MapKit
 
-final class MapVM: ObservableObject, NSObject {
+final class MapVM: NSObject, ObservableObject,  {
   @Published var alertItem: AlertItem?
   
   @Published var westBeach = MKCoordinateRegion(
