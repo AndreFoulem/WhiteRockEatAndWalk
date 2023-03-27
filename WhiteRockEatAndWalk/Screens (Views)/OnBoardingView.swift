@@ -9,7 +9,22 @@ import SwiftUI
 
 struct OnBoardingView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+      VStack {
+        LogoView(frameWidth: 250)
+        HStack {
+          Image(systemName: "building.2.crop.circle")
+            .resizable()
+            .frame(width: 50, height: 50)
+            .foregroundColor(.accentColor)
+          VStack {
+            Text("Restaurants Locations").bold()
+            Text("Find Ice Cream and Fish & Chips places at White Rock boardwalk.")
+              .foregroundColor(.secondary)
+              .lineLimit(2)
+              .minimumScaleFactor(0.7)
+          }
+        }
+      }
     }
 }
 

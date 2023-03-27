@@ -20,7 +20,7 @@ struct MapView: View {
         }.tint(.pink).edgesIgnoringSafeArea(.top)
 
         VStack {
-          LogoView()
+          LogoView(frameWidth: 125)
           Spacer()
         }
         
@@ -45,14 +45,7 @@ struct MapView: View {
 //
 // Local Components Views
 //
-struct LogoView: View {
-  var body: some View {
-    Image("ddg-map-logo")
-      .resizable()
-      .scaledToFit()
-      .frame(height: 70)
-  }
-}
+
 
 //
 // PREVIEW
