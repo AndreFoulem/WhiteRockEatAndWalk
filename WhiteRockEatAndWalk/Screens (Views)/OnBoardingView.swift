@@ -11,6 +11,16 @@ struct OnBoardingView: View {
 
     var body: some View {
       VStack {
+        //-> Dismiss
+        HStack {
+          Spacer()
+          Button {
+            
+          } label: {
+            
+          }
+        }
+        
         LogoView(frameWidth: 250)
           .padding(.bottom, 24)
       
@@ -22,6 +32,7 @@ struct OnBoardingView: View {
           InfoCell( imageName: OnboardContent.SFSymbol2.rawValue,
                     title: OnboardContent.title2.rawValue,
                     description: OnboardContent.desc2.rawValue)
+          
           InfoCell( imageName: OnboardContent.SFSymbol3.rawValue,
                     title: OnboardContent.title3.rawValue,
                     description: OnboardContent.desc3.rawValue)
@@ -33,6 +44,10 @@ struct OnBoardingView: View {
     }//body
 }
 
+
+//
+//-> LOCAL STRUCT COMPONENTS
+//
 extension OnBoardingView {
   
   struct InfoCell: View {
@@ -50,7 +65,8 @@ extension OnBoardingView {
           .padding(.vertical, -38)
         VStack(alignment: .leading) {
           Text(title).bold()
-            .padding(.bottom, 1)
+            .font(.title3)
+            .padding(1)
           Text(description)
             .foregroundColor(.secondary)
             .lineLimit(2)
@@ -63,6 +79,11 @@ extension OnBoardingView {
   
 }
 
+
+
+  //
+  //-> LOCAL STRUCT COMPONENTS
+  //
 struct OnBoardingView_Previews: PreviewProvider {
     static var previews: some View {
         OnBoardingView()
