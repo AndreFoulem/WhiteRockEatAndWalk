@@ -17,6 +17,16 @@ struct OnBoardingView: View {
           Button {
             
           } label: {
+            ZStack {
+              Circle()
+                .frame(width:30, height:30)
+                .foregroundColor(.accentColor)
+              Image(systemName: "xmark")
+                .foregroundColor(.white)
+                .imageScale(.small)
+                //-> Target area
+                .frame(width: 60, height: 60)
+            }
             
           }
         }
@@ -38,7 +48,7 @@ struct OnBoardingView: View {
                     description: OnboardContent.desc3.rawValue)
         }//vs
         .padding(.trailing, 32)
-        .padding(.leading, 16)
+        .padding(.leading, 24)
         
       }//vs
     }//body
