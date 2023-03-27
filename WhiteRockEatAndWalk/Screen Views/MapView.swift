@@ -23,8 +23,11 @@ struct MapView: View {
           LogoView(frameWidth: 125)
           Spacer()
         }
-        
+
       }//zs
+      .sheet(isPresented: $vm.isShowingOnboardingView){
+        OnBoardingView()
+      }
       .alert(item: $vm.alertItem, content: { alertItem in
         Alert(title: alertItem.title,
               message: alertItem.message,
@@ -42,14 +45,7 @@ struct MapView: View {
     }//body
 }
 
-//
-// Local Components Views
-//
 
-
-//
-// PREVIEW
-//
 struct MapView_Previews: PreviewProvider {
   static var previews: some View {
     MapView()
