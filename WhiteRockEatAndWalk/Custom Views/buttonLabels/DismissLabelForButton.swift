@@ -9,7 +9,16 @@ import SwiftUI
 
 struct DismissLabelForButton: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+      ZStack {
+        Circle()
+          .frame(width:30, height:30)
+          .foregroundColor(.accentColor)
+        Image(systemName: "xmark")
+          .foregroundColor(.white)
+          .imageScale(.small)
+          //-> Target area
+          .frame(width: 60, height: 60)
+      }
     }
 }
 
