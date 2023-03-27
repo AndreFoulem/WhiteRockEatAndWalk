@@ -22,8 +22,9 @@ final class MapVM: NSObject, ObservableObject {
   
   func checkIfLocationServicesIsEnabled() {
     if CLLocationManager.locationServicesEnabled() {
-      // Init the CLLocationManager Instance
+      // Init the CLLocationManager Instance -> Fire off the Manager Delegate method
       deviceLocationManager = CLLocationManager()
+      deviceLocationManager!.delegate = self
       //-> Accuracy Best is the default
       deviceLocationManager?.desiredAccuracy = kCLLocationAccuracyBest
  

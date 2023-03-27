@@ -14,6 +14,7 @@
 		9038003C29CBF7DD00EE7444 /* CKManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9038003B29CBF7DD00EE7444 /* CKManager.swift */; };
 		9038003F29CBF91300EE7444 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9038003E29CBF91300EE7444 /* Constants.swift */; };
 		903942BA29CE2E4800FE546F /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903942B929CE2E4800FE546F /* LocationManager.swift */; };
+		9070F28B29D239690019C51E /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9070F28A29D239690019C51E /* OnBoardingView.swift */; };
 		90A7071E29CE181700293D82 /* CKRecord+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A7071D29CE181700293D82 /* CKRecord+.swift */; };
 		90A7072029CE1A0900293D82 /* AlertItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A7071F29CE1A0900293D82 /* AlertItem.swift */; };
 		90A8A02429C961760096C833 /* LocationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A8A02329C961760096C833 /* LocationDetailView.swift */; };
@@ -43,6 +44,7 @@
 		9038003B29CBF7DD00EE7444 /* CKManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CKManager.swift; sourceTree = "<group>"; };
 		9038003E29CBF91300EE7444 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		903942B929CE2E4800FE546F /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		9070F28A29D239690019C51E /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
 		9080DFFF29CC061D00DD7887 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		90A7071D29CE181700293D82 /* CKRecord+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CKRecord+.swift"; sourceTree = "<group>"; };
 		90A7071F29CE1A0900293D82 /* AlertItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertItem.swift; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 				90A8A02329C961760096C833 /* LocationDetailView.swift */,
 				90B8DACB29C91314002B0DCD /* MapView.swift */,
 				90DDC2D529CE2560004D17F3 /* MapVM.swift */,
+				9070F28A29D239690019C51E /* OnBoardingView.swift */,
 				90B8DAC929C912FF002B0DCD /* ProfileView.swift */,
 			);
 			path = "Screens (Views)";
@@ -274,6 +277,7 @@
 				90B8DAB429C8FE19002B0DCD /* ContentView.swift in Sources */,
 				9038003F29CBF91300EE7444 /* Constants.swift in Sources */,
 				901E107329CFA5690030A8F1 /* CKAsset+.swift in Sources */,
+				9070F28B29D239690019C51E /* OnBoardingView.swift in Sources */,
 				90A7071E29CE181700293D82 /* CKRecord+.swift in Sources */,
 				90B8DAC829C912E5002B0DCD /* LocationsView.swift in Sources */,
 				90A8A02429C961760096C833 /* LocationDetailView.swift in Sources */,
