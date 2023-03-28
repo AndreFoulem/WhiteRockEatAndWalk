@@ -32,5 +32,9 @@ struct AlertContext {
   static let deviceLocationDisabled = AlertItem(title: Text("Location access disabled"),
                                               message: Text("Your phone location services is enabled. To enable location access go to Settings > Privacy > Location Services"),
                                               dismissBtn: .default(Text("OK")))
-}
 
+  //MARK: - ProfileView Errors
+  static let invalidProfile = AlertItem(title: Text("Invalid Profile"),
+                                              message: Text("All text fields needt to be filled up. A default avatar image should be chosen"),
+                                              dismissBtn: .default(Text("OK")))
+}

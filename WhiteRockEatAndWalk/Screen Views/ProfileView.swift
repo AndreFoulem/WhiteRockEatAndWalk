@@ -64,7 +64,7 @@ extension ProfileView {
   
   func createProfile() {
     guard isValidProfile() else {
-      //show alert
+      alertItem = AlertContext.invalidProfile
       return
     }
     
