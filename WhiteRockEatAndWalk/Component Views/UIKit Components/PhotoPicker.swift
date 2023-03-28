@@ -12,6 +12,7 @@ struct PhotoPicker: UIViewControllerRepresentable {
   typealias UIViewControllerType = UIImagePickerController
   
   @Binding var image: UIImage
+  @Environment(\.dismiss) var dismiss
 
   func makeUIViewController(context: Context) -> UIImagePickerController {
     let picker = UIImagePickerController()
@@ -43,6 +44,7 @@ final class CoordinatorDelegate: NSObject, UINavigationControllerDelegate, UIIma
       let compressedImageData = image.jpegData(compressionQuality: 1)
       photoPicker.image = UIImage(data: compressedImageData!)!
     }
+    photoPicker.dismiss()
   }
 }
   // /////////////  DELEGATE //////////////////// //

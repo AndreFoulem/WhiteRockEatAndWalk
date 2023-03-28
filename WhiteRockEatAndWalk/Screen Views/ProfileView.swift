@@ -58,14 +58,14 @@ extension ProfileView {
       HStack(spacing: 16) {
         ZStack {
           AvatarView(image: avatar,size: 84)
+            .onTapGesture {
+              isShowingPhotoPicker = true
+            }
           Image(systemName: "pencil.circle.fill")
             .font(.title)
             .foregroundColor(.black)
             .opacity(0.7)
             .offset(x: 30, y: 30)
-            .onTapGesture {
-              isShowingPhotoPicker = true
-            }
         }
         
         VStack(spacing: 0) {
