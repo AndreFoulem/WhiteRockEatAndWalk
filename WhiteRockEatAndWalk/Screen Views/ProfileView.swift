@@ -14,6 +14,7 @@ struct ProfileView: View {
     @State private var companyName = ""
     @State private var biography = ""
     @State private var avatar = PlaceHolderImage.avatarImg!
+    @State private var isShowingPhotoPicker = false
     
     var body: some View {
       
@@ -28,6 +29,9 @@ struct ProfileView: View {
         saveButton
       }
       .padding(.horizontal)
+      .sheet(isPresented: $isShowingPhotoPicker) {
+        PhotoPicker(image: $avatar)
+      }
 //      .navigationTitle("Profile")
     }
 }
