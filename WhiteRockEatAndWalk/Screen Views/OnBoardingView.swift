@@ -1,18 +1,19 @@
 import SwiftUI
 
 struct OnBoardingView: View {
+  @Binding var isShowingOnBoardingView: Bool
   
   var body: some View {
-    
     VStack {
       HStack {
         Spacer()
         Button {
-          
+          isShowingOnBoardingView = false
         } label: {
           DismissLabelForButton()
         }
       }
+      .padding(.trailing)
       LogoView(frameWidth: 250)
         .padding(.bottom, 24)
       descriptionCells
@@ -74,6 +75,6 @@ extension OnBoardingView {
 //
 struct OnBoardingView_Previews: PreviewProvider {
     static var previews: some View {
-        OnBoardingView()
+      OnBoardingView(isShowingOnBoardingView: .constant(true))
     }
 }

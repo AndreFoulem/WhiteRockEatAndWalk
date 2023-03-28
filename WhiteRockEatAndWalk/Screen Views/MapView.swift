@@ -26,7 +26,7 @@ struct MapView: View {
 
       }//zs
       .sheet(isPresented: $vm.isShowingOnboardingView){
-        OnBoardingView()
+        OnBoardingView(isShowingOnBoardingView: $vm.isShowingOnboardingView)
       }
       .alert(item: $vm.alertItem, content: { alertItem in
         Alert(title: alertItem.title,
@@ -35,7 +35,7 @@ struct MapView: View {
         )
       })
       .onAppear {
-        vm.checkIfLocationServicesIsEnabled()
+        vm.runStartupCheck()
         
         if locationManager.locations.isEmpty {
           vm.fetchLocations(for: locationManager)

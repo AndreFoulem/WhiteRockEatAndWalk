@@ -19,6 +19,19 @@ final class MapVM: NSObject, ObservableObject {
     center: CLLocationCoordinate2D(latitude: 49.0160, longitude: -122.7895),
     span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
   
+  var kHasSeenOnBoardingView = "hasSeenOnBoardingView"
+  var hasSeenOnBoardingView: Bool {
+    return UserDefaults.standard.bool(forKey: kHasSeenOnBoardingView)
+  }
+  func runStartupCheck() {
+    if !hasSeenOnBoardingView {
+      isShowingOnboardingView = true
+      UserDefaults.standard.set(true, forKey: kHasSeenOnBoardingView)
+    } else {
+      checkIfLocationServicesIsEnabled()
+    }
+  }
+  
   var deviceLocationManager: CLLocationManager?
   
   func checkIfLocationServicesIsEnabled() {
