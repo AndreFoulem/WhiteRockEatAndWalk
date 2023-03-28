@@ -39,7 +39,10 @@ final class CoordinatorDelegate: NSObject, UINavigationControllerDelegate, UIIma
   }
   
   func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-    <#code#>
+    if let image = info[.editedImage] as? UIImage {
+      let compressedImageData = image.jpegData(compressionQuality: 1)
+      photoPicker.image = UIImage(data: compressedImageData!)!
+    }
   }
 }
   // /////////////  DELEGATE //////////////////// //

@@ -63,6 +63,9 @@ extension ProfileView {
             .foregroundColor(.black)
             .opacity(0.7)
             .offset(x: 30, y: 30)
+            .onTapGesture {
+              isShowingPhotoPicker = true
+            }
         }
         
         VStack(spacing: 0) {
