@@ -19,6 +19,7 @@
 		9070F29029D23E700019C51E /* OnboardContentEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9070F28F29D23E700019C51E /* OnboardContentEnum.swift */; };
 		9070F29329D258680019C51E /* DismissLabelForButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9070F29229D258680019C51E /* DismissLabelForButton.swift */; };
 		9070F29629D279CA0019C51E /* PhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9070F29529D279CA0019C51E /* PhotoPicker.swift */; };
+		9070F29A29D36DF20019C51E /* FormHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9070F29929D36DF20019C51E /* FormHelpers.swift */; };
 		90A7071E29CE181700293D82 /* CKRecord+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A7071D29CE181700293D82 /* CKRecord+.swift */; };
 		90A7072029CE1A0900293D82 /* AlertItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A7071F29CE1A0900293D82 /* AlertItem.swift */; };
 		90A8A02429C961760096C833 /* LocationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A8A02329C961760096C833 /* LocationDetailView.swift */; };
@@ -53,6 +54,7 @@
 		9070F28F29D23E700019C51E /* OnboardContentEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardContentEnum.swift; sourceTree = "<group>"; };
 		9070F29229D258680019C51E /* DismissLabelForButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissLabelForButton.swift; sourceTree = "<group>"; };
 		9070F29529D279CA0019C51E /* PhotoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPicker.swift; sourceTree = "<group>"; };
+		9070F29929D36DF20019C51E /* FormHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormHelpers.swift; sourceTree = "<group>"; };
 		9080DFFF29CC061D00DD7887 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		90A7071D29CE181700293D82 /* CKRecord+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CKRecord+.swift"; sourceTree = "<group>"; };
 		90A7071F29CE1A0900293D82 /* AlertItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertItem.swift; sourceTree = "<group>"; };
@@ -117,8 +119,9 @@
 		9038003D29CBF8FD00EE7444 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				9038003E29CBF91300EE7444 /* Constants.swift */,
-				90A7071F29CE1A0900293D82 /* AlertItem.swift */,
+				9070F29829D36DD50019C51E /* Constants */,
+				9070F29729D36DB40019C51E /* Helpers */,
+				90A8A02D29CA9EB20096C833 /* Modifiers */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -146,6 +149,23 @@
 				9070F29529D279CA0019C51E /* PhotoPicker.swift */,
 			);
 			path = "UIKit Components";
+			sourceTree = "<group>";
+		};
+		9070F29729D36DB40019C51E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				9070F29929D36DF20019C51E /* FormHelpers.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		9070F29829D36DD50019C51E /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				9038003E29CBF91300EE7444 /* Constants.swift */,
+				90A7071F29CE1A0900293D82 /* AlertItem.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 		90A8A02229C961680096C833 /* Component Views */ = {
@@ -198,7 +218,6 @@
 				90A8A02229C961680096C833 /* Component Views */,
 				90B8DAC629C90CC4002B0DCD /* Screen Views */,
 				9038003A29CBF7C000EE7444 /* Managers */,
-				90A8A02D29CA9EB20096C833 /* Modifiers */,
 				90B8DAC229C9042E002B0DCD /* Extensions */,
 				9070F28E29D23E2D0019C51E /* Content */,
 				9038003D29CBF8FD00EE7444 /* Utilities */,
@@ -317,6 +336,7 @@
 				90A7071E29CE181700293D82 /* CKRecord+.swift in Sources */,
 				9070F29029D23E700019C51E /* OnboardContentEnum.swift in Sources */,
 				90B8DAC829C912E5002B0DCD /* LocationsView.swift in Sources */,
+				9070F29A29D36DF20019C51E /* FormHelpers.swift in Sources */,
 				90A8A02429C961760096C833 /* LocationDetailView.swift in Sources */,
 				90A8A02C29CA917E0096C833 /* FirstNameAvatarView.swift in Sources */,
 				90A8A02A29CA90E20096C833 /* LocationCellView.swift in Sources */,
