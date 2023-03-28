@@ -15,6 +15,7 @@ struct ProfileView: View {
     @State private var biography = ""
     @State private var avatar = PlaceHolderImage.avatarImg!
     @State private var isShowingPhotoPicker = false
+    @State private var alertItem: AlertItem?
     
     var body: some View {
       
@@ -29,14 +30,27 @@ struct ProfileView: View {
         saveButton
       }
       .padding(.horizontal)
+      .toolbar {
+        Button {
+          dismissKeyboard()
+        } label: {
+          Image(systemName: "person")
+        }
+      }
+      .alert(item: $alertItem, content: { alertItem in
+        Alert(title: alertItem.title,
+              message: alertItem.message,
+              dismissButton: alertItem.dismissBtn
+        )
+      })
       .sheet(isPresented: $isShowingPhotoPicker) {
         PhotoPicker(image: $avatar)
       }
-//      .navigationTitle("Profile")
+      .navigationTitle("Profile")
     }
 }
 
-//MARK: extended functions
+//MARK: functions
 extension ProfileView {
   func isValidProfile() -> Bool {
     guard !firstName.isEmpty,
@@ -47,9 +61,18 @@ extension ProfileView {
           biography.count < 100 else { return false }
     return true
   }
+  
+  func createProfile() {
+    guard isValidProfile() else {
+      //show alert
+      return
+    }
+    
+    // create our profile send it
+  }
 }
 
-//MARK: extended var as view
+//MARK: views
 extension ProfileView {
   private var profileTitle: some View {
     HStack {
