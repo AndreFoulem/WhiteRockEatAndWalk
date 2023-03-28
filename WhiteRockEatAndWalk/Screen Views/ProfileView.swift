@@ -36,7 +36,20 @@ struct ProfileView: View {
     }
 }
 
+//MARK: extended functions
+extension ProfileView {
+  func isValidProfile() -> Bool {
+    guard !firstName.isEmpty,
+          !lastName.isEmpty,
+          !companyName.isEmpty,
+          !biography.isEmpty,
+          avatar != PlaceHolderImage.avatarImg,
+          biography.count < 100 else { return false }
+    return true
+  }
+}
 
+//MARK: extended var as view
 extension ProfileView {
   private var profileTitle: some View {
     HStack {
