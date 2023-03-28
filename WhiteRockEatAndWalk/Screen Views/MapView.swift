@@ -25,7 +25,7 @@ struct MapView: View {
         }
 
       }//zs
-      .sheet(isPresented: $vm.isShowingOnboardingView){
+      .sheet(isPresented: $vm.isShowingOnboardingView, onDismiss: vm.checkIfLocationServicesIsEnabled) {
         OnBoardingView(isShowingOnBoardingView: $vm.isShowingOnboardingView)
       }
       .alert(item: $vm.alertItem, content: { alertItem in

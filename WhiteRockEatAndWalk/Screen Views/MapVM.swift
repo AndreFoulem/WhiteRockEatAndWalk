@@ -8,7 +8,8 @@
 import MapKit
 
 final class MapVM: NSObject, ObservableObject {
-  @Published var isShowingOnboardingView = true
+  //- toggle to see the updated value
+  @Published var isShowingOnboardingView = false
   @Published var alertItem: AlertItem?
   
   @Published var westBeach = MKCoordinateRegion(
