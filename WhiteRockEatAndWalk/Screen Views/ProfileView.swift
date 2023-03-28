@@ -13,6 +13,7 @@ struct ProfileView: View {
     @State private var lastName = ""
     @State private var companyName = ""
     @State private var biography = ""
+    @State private var avatar = PlaceHolderImage.avatarImg
     
     var body: some View {
       
