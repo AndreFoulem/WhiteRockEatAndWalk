@@ -18,6 +18,7 @@
 		9070F28D29D23A620019C51E /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9070F28C29D23A620019C51E /* LogoView.swift */; };
 		9070F29029D23E700019C51E /* OnboardContentEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9070F28F29D23E700019C51E /* OnboardContentEnum.swift */; };
 		9070F29329D258680019C51E /* DismissLabelForButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9070F29229D258680019C51E /* DismissLabelForButton.swift */; };
+		9070F29629D279CA0019C51E /* PhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9070F29529D279CA0019C51E /* PhotoPicker.swift */; };
 		90A7071E29CE181700293D82 /* CKRecord+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A7071D29CE181700293D82 /* CKRecord+.swift */; };
 		90A7072029CE1A0900293D82 /* AlertItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A7071F29CE1A0900293D82 /* AlertItem.swift */; };
 		90A8A02429C961760096C833 /* LocationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A8A02329C961760096C833 /* LocationDetailView.swift */; };
@@ -51,6 +52,7 @@
 		9070F28C29D23A620019C51E /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
 		9070F28F29D23E700019C51E /* OnboardContentEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardContentEnum.swift; sourceTree = "<group>"; };
 		9070F29229D258680019C51E /* DismissLabelForButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissLabelForButton.swift; sourceTree = "<group>"; };
+		9070F29529D279CA0019C51E /* PhotoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPicker.swift; sourceTree = "<group>"; };
 		9080DFFF29CC061D00DD7887 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		90A7071D29CE181700293D82 /* CKRecord+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CKRecord+.swift"; sourceTree = "<group>"; };
 		90A7071F29CE1A0900293D82 /* AlertItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertItem.swift; sourceTree = "<group>"; };
@@ -138,16 +140,25 @@
 			path = buttonLabels;
 			sourceTree = "<group>";
 		};
-		90A8A02229C961680096C833 /* Custom Views */ = {
+		9070F29429D279930019C51E /* UIKit Components */ = {
 			isa = PBXGroup;
 			children = (
+				9070F29529D279CA0019C51E /* PhotoPicker.swift */,
+			);
+			path = "UIKit Components";
+			sourceTree = "<group>";
+		};
+		90A8A02229C961680096C833 /* Component Views */ = {
+			isa = PBXGroup;
+			children = (
+				9070F29429D279930019C51E /* UIKit Components */,
 				9070F29129D258120019C51E /* buttonLabels */,
 				90A8A02529CA35CE0096C833 /* AvatarView.swift */,
 				90A8A02929CA90E20096C833 /* LocationCellView.swift */,
 				90A8A02B29CA917E0096C833 /* FirstNameAvatarView.swift */,
 				9070F28C29D23A620019C51E /* LogoView.swift */,
 			);
-			path = "Custom Views";
+			path = "Component Views";
 			sourceTree = "<group>";
 		};
 		90A8A02D29CA9EB20096C833 /* Modifiers */ = {
@@ -184,7 +195,7 @@
 				90B8DAB129C8FE19002B0DCD /* WhiteRockEatAndWalkApp.swift */,
 				90B8DAB329C8FE19002B0DCD /* ContentView.swift */,
 				9038003329CBDF0600EE7444 /* Model */,
-				90A8A02229C961680096C833 /* Custom Views */,
+				90A8A02229C961680096C833 /* Component Views */,
 				90B8DAC629C90CC4002B0DCD /* Screen Views */,
 				9038003A29CBF7C000EE7444 /* Managers */,
 				90A8A02D29CA9EB20096C833 /* Modifiers */,
@@ -324,6 +335,7 @@
 				90B8DAC529C90CBE002B0DCD /* AppTabView.swift in Sources */,
 				90B8DACA29C912FF002B0DCD /* ProfileView.swift in Sources */,
 				90A8A02629CA35CE0096C833 /* AvatarView.swift in Sources */,
+				9070F29629D279CA0019C51E /* PhotoPicker.swift in Sources */,
 				9038003529CBDF3B00EE7444 /* EAWLocation.swift in Sources */,
 				90B8DAC129C90429002B0DCD /* Color+ColorSet.swift in Sources */,
 				9038003929CBE77F00EE7444 /* MockLocation.swift in Sources */,

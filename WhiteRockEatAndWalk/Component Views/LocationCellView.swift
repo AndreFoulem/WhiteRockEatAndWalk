@@ -27,11 +27,11 @@ struct LocationCellView: View {
           .fontWeight(.semibold)
         
         HStack {
-          AvatarView()
-          AvatarView()
-          AvatarView()
-          AvatarView()
-          AvatarView()
+          AvatarView(image: PlaceHolderImage.avatarImg!)
+          AvatarView(image: PlaceHolderImage.avatarImg!)
+          AvatarView(image: PlaceHolderImage.avatarImg!)
+          AvatarView(image: PlaceHolderImage.avatarImg!)
+          AvatarView(image: PlaceHolderImage.avatarImg!)
         }
       }
       .padding(.leading,4)
