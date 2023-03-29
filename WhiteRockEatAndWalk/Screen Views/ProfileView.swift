@@ -52,6 +52,7 @@ struct ProfileView: View {
 
 //MARK: functions
 extension ProfileView {
+  
   func isValidProfile() -> Bool {
     guard !firstName.isEmpty,
           !lastName.isEmpty,
@@ -68,7 +69,13 @@ extension ProfileView {
       return
     }
     
-    // create our profile send it
+    // Create our CKRecord from the profile view
+    
+    // Get our userRecordID from the Container
+    
+    // Get UserRecord from the Public Database
+    
+    // Create References on UserRecord to the EAWProfile we created
   }
 }
 
