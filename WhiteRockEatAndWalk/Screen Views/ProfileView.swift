@@ -146,10 +146,11 @@ extension ProfileView {
   
   private var saveButton: some View {
     Button {
-      
+      createProfile()
     } label: {
        ButtonLabel(label: "Save")
     }
+    .padding(.bottom)
   }
 }
 
