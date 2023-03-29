@@ -19,7 +19,11 @@ extension UIImage {
     guard let imageData = jpegData(compressionQuality: 0.7) else { return nil }
     
     //: 4 Create our CKAsset with our CKAssets
-    
-    return nil
+    do {
+      try imageData.write(to: fileUrl)
+      return CKAsset(fileURL: fileUrl)
+    } catch {
+      return nil
+    }
   }
 }
