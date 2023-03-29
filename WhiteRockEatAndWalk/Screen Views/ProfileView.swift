@@ -78,13 +78,27 @@ extension ProfileView {
     profileRecord[EAWProfile.kCompany] = companyName
     profileRecord[EAWProfile.kAvatar] = avatar.convertToCKAsset()
     
-    // Get our userRecordID from the Container
+      // Get our userRecordID from the Container
+      CKContainer.default().fetchUserRecordID { recordID, error in
+      guard let recordID,
+            error == nil else {
+        print(error!.localizedDescription)
+        return
+      }
+      // Get UserRecord from the Public Database
+      CKContainer.default().publicCloudDatabase.fetch(withRecordID: recordID) { userRecord, error in
+        guard let userRecord,
+              error == nil else {
+          print(error!.localizedDescription)
+          return
+      }
+      
+      // Create References on UserRecord to the EAWProfile we created
+      
+      // Create CKOperation to save batch entry
+    }
     
-    // Get UserRecord from the Public Database
-    
-    // Create References on UserRecord to the EAWProfile we created
-    
-    // Create CKOperation to save batch entry
+
   }
 }
 
