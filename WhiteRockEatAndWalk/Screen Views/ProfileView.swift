@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CloudKit
 //! import AvatarView
 
 struct ProfileView: View {
@@ -70,12 +71,20 @@ extension ProfileView {
     }
     
     // Create our CKRecord from the profile view
+    let profileRecord = CKRecord(recordType: "EAWProfile")
+    profileRecord[EAWProfile.kFirstName] = firstName
+    profileRecord[EAWProfile.kLastName] = lastName
+    profileRecord[EAWProfile.kBio] = biography
+    profileRecord[EAWProfile.kCompany] = companyName
+    profileRecord[EAWProfile.kAvatar] = avatar.convertToCKAsset()
     
     // Get our userRecordID from the Container
     
     // Get UserRecord from the Public Database
     
     // Create References on UserRecord to the EAWProfile we created
+    
+    // Create CKOperation to save batch entry
   }
 }
 
