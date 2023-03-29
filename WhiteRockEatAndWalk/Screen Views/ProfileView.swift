@@ -70,7 +70,7 @@ extension ProfileView {
       return
     }
     
-    // Create our CKRecord from the profile view
+      // Create our CKRecord from the profile view
     let profileRecord = CKRecord(recordType: "EAWProfile")
     profileRecord[EAWProfile.kFirstName] = firstName
     profileRecord[EAWProfile.kLastName] = lastName
@@ -79,28 +79,43 @@ extension ProfileView {
     profileRecord[EAWProfile.kAvatar] = avatar.convertToCKAsset()
     
       // Get our userRecordID from the Container
-      CKContainer.default().fetchUserRecordID { recordID, error in
+    CKContainer.default().fetchUserRecordID { recordID, error in
       guard let recordID,
             error == nil else {
         print(error!.localizedDescription)
         return
       }
-      // Get UserRecord from the Public Database
+        // Get UserRecord from the Public Database
       CKContainer.default().publicCloudDatabase.fetch(withRecordID: recordID) { userRecord, error in
         guard let userRecord,
               error == nil else {
           print(error!.localizedDescription)
           return
+        }
+        
+          // Create References on UserRecord to the EAWProfile we created
+        userRecord["userProfile"] = CKRecord.Reference(recordID: profileRecord.recordID, action: .none)
+        
+          // Create CKOperation to save batch entry
+        let operation = CKModifyRecordsOperation(recordsToSave: [userRecord, profileRecord])
+        
+        operation.modifyRecordsCompletionBlock = { savedRecords, _, error in
+          guard let savedRecords,
+                error == nil else {
+            print(error!.localizedDescription)
+            return
+          }
+          print(savedRecords)
+        }
+        
+        CKContainer.default().publicCloudDatabase.add(operation)
       }
-      
-      // Create References on UserRecord to the EAWProfile we created
-      
-      // Create CKOperation to save batch entry
+   
     }
     
-
-  }
-}
+  }//createProfile
+  
+}//ext
 
 //MARK: views
 extension ProfileView {
