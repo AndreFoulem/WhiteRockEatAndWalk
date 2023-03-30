@@ -39,6 +39,7 @@
 		90B8DAC829C912E5002B0DCD /* LocationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B8DAC729C912E5002B0DCD /* LocationsView.swift */; };
 		90B8DACA29C912FF002B0DCD /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B8DAC929C912FF002B0DCD /* ProfileView.swift */; };
 		90B8DACC29C91314002B0DCD /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B8DACB29C91314002B0DCD /* MapView.swift */; };
+		90CB0C2A29D5381800CD6E81 /* ProfileVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CB0C2929D5381800CD6E81 /* ProfileVM.swift */; };
 		90DDC2D629CE2560004D17F3 /* MapVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DDC2D529CE2560004D17F3 /* MapVM.swift */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +79,7 @@
 		90B8DAC729C912E5002B0DCD /* LocationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsView.swift; sourceTree = "<group>"; };
 		90B8DAC929C912FF002B0DCD /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		90B8DACB29C91314002B0DCD /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		90CB0C2929D5381800CD6E81 /* ProfileVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVM.swift; sourceTree = "<group>"; };
 		90DDC2D529CE2560004D17F3 /* MapVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -258,6 +260,7 @@
 				90DDC2D529CE2560004D17F3 /* MapVM.swift */,
 				9070F28A29D239690019C51E /* OnBoardingView.swift */,
 				90B8DAC929C912FF002B0DCD /* ProfileView.swift */,
+				90CB0C2929D5381800CD6E81 /* ProfileVM.swift */,
 			);
 			path = "Screen Views";
 			sourceTree = "<group>";
@@ -362,6 +365,7 @@
 				9070F29629D279CA0019C51E /* PhotoPicker.swift in Sources */,
 				9038003529CBDF3B00EE7444 /* EAWLocation.swift in Sources */,
 				90B8DAC129C90429002B0DCD /* Color+ColorSet.swift in Sources */,
+				90CB0C2A29D5381800CD6E81 /* ProfileVM.swift in Sources */,
 				9038003929CBE77F00EE7444 /* MockLocation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

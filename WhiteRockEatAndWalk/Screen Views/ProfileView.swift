@@ -10,13 +10,7 @@ import CloudKit
 //! import AvatarView
 
 struct ProfileView: View {
-    @State private var firstName = ""
-    @State private var lastName = ""
-    @State private var companyName = ""
-    @State private var biography = ""
-    @State private var avatar = PlaceHolderImage.avatarImg!
-    @State private var isShowingPhotoPicker = false
-    @State private var alertItem: AlertItem?
+  @StateObject private var vm = ProfileVM()
     
     var body: some View {
       
@@ -38,120 +32,21 @@ struct ProfileView: View {
           Image(systemName: "person")
         }
       }
-      .alert(item: $alertItem, content: { alertItem in
+      .onAppear {
+        vm.getProfile()
+      }
+      .alert(item: $vm.alertItem, content: { alertItem in
         Alert(title: alertItem.title,
               message: alertItem.message,
               dismissButton: alertItem.dismissBtn
         )
       })
-      .sheet(isPresented: $isShowingPhotoPicker) {
-        PhotoPicker(image: $avatar)
+      .sheet(isPresented: $vm.isShowingPhotoPicker) {
+        PhotoPicker(image: $vm.avatar)
       }
       .navigationTitle("Profile")
     }
 }
-
-//MARK: functions
-extension ProfileView {
-  
-  func isValidProfile() -> Bool {
-    guard !firstName.isEmpty,
-          !lastName.isEmpty,
-          !companyName.isEmpty,
-          !biography.isEmpty,
-          avatar != PlaceHolderImage.avatarImg,
-          biography.count < 100 else { return false }
-    return true
-  }
-  
-  func createProfile() {
-    guard isValidProfile() else {
-      alertItem = AlertContext.invalidProfile
-      return
-    }
-    
-      // Create our CKRecord from the profile view
-    let profileRecord = CKRecord(recordType: "EAWProfile")
-    profileRecord[EAWProfile.kFirstName] = firstName
-    profileRecord[EAWProfile.kLastName] = lastName
-    profileRecord[EAWProfile.kBio] = biography
-    profileRecord[EAWProfile.kCompany] = companyName
-    profileRecord[EAWProfile.kAvatar] = avatar.convertToCKAsset()
-    
-      // Get our userRecordID from the Container
-    CKContainer.default().fetchUserRecordID { recordID, error in
-      guard let recordID,
-            error == nil else {
-        print(error!.localizedDescription)
-        return
-      }
-        // Get UserRecord from the Public Database
-      CKContainer.default().publicCloudDatabase.fetch(withRecordID: recordID) { userRecord, error in
-        guard let userRecord,
-              error == nil else {
-          print(error!.localizedDescription)
-          return
-        }
-        
-          // Create References on UserRecord to the EAWProfile we created
-        userRecord["userProfile"] = CKRecord.Reference(recordID: profileRecord.recordID, action: .none)
-        
-          // Create CKOperation to save batch entry
-        let operation = CKModifyRecordsOperation(recordsToSave: [userRecord, profileRecord])
-        
-        operation.modifyRecordsCompletionBlock = { savedRecords, _, error in
-          guard let savedRecords,
-                error == nil else {
-            print(error!.localizedDescription)
-            return
-          }
-          print(savedRecords)
-        }
-        
-        CKContainer.default().publicCloudDatabase.add(operation)
-      }
-   
-    }
-    
-  }//createProfile
-  
-  func getProfile() {
-    CKContainer.default().fetchUserRecordID { recordID, error in
-      guard let recordID,
-            error == nil else {
-        print(error!.localizedDescription)
-        return
-      }
-        CKContainer.default().publicCloudDatabase.fetch(withRecordID: recordID) { userRecord, error in
-          guard let userRecord,
-                error == nil else {
-            print(error!.localizedDescription)
-            return
-          }
-            // get the reference
-          let profileReference = userRecord["userProfile"] as! CKRecord.Reference
-          let profileRecordID = profileReference.recordID
-          
-          CKContainer.default().publicCloudDatabase.fetch(withRecordID: profileRecordID) { profileRecord, error in
-            guard let profileRecord, error == nil else {
-              print(error!.localizedDescription)
-              return }
-            DispatchQueue.main.async {
-              let profile = EAWProfile(record: profileRecord)
-              firstName = profile.firstName
-              lastName = profile.lastName
-              companyName = profile.company
-              biography = profile.bio
-              avatar = profile.avatarImage
-            }
-          }
-        }
-    }//mainCKContainer
-    
-  }//getProfile
-
-  
-}//ext
 
 //MARK: views
 extension ProfileView {
@@ -174,9 +69,9 @@ extension ProfileView {
       
       HStack(spacing: 16) {
         ZStack {
-          AvatarView(image: avatar,size: 84)
+          AvatarView(image: vm.avatar,size: 84)
             .onTapGesture {
-              isShowingPhotoPicker = true
+              vm.isShowingPhotoPicker = true
             }
           Image(systemName: "pencil.circle.fill")
             .font(.title)
@@ -186,14 +81,9 @@ extension ProfileView {
         }
         
         VStack(spacing: 0) {
-          TextField("First Name", text: $firstName)
-            .profileTextField(mystyle: .title)
-          
-          TextField("Last Name", text: $lastName)
-            .profileTextField(mystyle: .title)
-          
-          TextField("Company Name", text: $companyName)
-            .profileTextField(mystyle: .title3)
+          TextField("First Name", text: $vm.firstName).profileTextField(mystyle: .title)
+          TextField("Last Name", text: $vm.lastName).profileTextField(mystyle: .title)
+          TextField("Company Name", text: $vm.companyName).profileTextField(mystyle: .title3)
         }
         
       }//hs
@@ -207,14 +97,14 @@ extension ProfileView {
       Text("Bio: ")
         .foregroundColor(.secondary)
       +
-      Text("\(100 - biography.count)")
-        .foregroundColor(biography.count <= 100 ? .primary : .pink)
+      Text("\(100 - vm.biography.count)")
+        .foregroundColor(vm.biography.count <= 100 ? .primary : .pink)
         .fontWeight(.black)
       +
       Text(" Characters of less")
         .foregroundColor(.secondary)
       
-      TextEditor(text: $biography)
+      TextEditor(text: $vm.biography)
         .frame(height: 100)
         .overlay(
           RoundedRectangle(cornerRadius: 8)
