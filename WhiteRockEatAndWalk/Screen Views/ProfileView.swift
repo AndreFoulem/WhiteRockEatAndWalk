@@ -115,6 +115,32 @@ extension ProfileView {
     
   }//createProfile
   
+  func getProfile() {
+    CKContainer.default().fetchUserRecordID { recordID, error in
+      guard let recordID,
+            error == nil else {
+        print(error!.localizedDescription)
+        return
+      }
+        CKContainer.default().publicCloudDatabase.fetch(withRecordID: recordID) { userRecord, error in
+          guard let userRecord,
+                error == nil else {
+            print(error!.localizedDescription)
+            return
+          }
+            // get the reference
+          let profileReference = userRecord["userProfile"] as! CKRecord.Reference
+          let profileRecordID = profileReference.recordID
+          
+          CKContainer.default().publicCloudDatabase.fetch(withRecordID: profileRecordID) { profileRecord, error in
+            
+          }
+        }
+    }//mainCKContainer
+    
+  }//getProfile
+
+  
 }//ext
 
 //MARK: views
@@ -191,7 +217,7 @@ extension ProfileView {
   
   private var saveButton: some View {
     Button {
-      createProfile()
+//      createProfile()
     } label: {
        ButtonLabel(label: "Save")
     }
