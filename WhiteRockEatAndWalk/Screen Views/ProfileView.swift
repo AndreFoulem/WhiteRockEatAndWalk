@@ -142,7 +142,7 @@ extension ProfileView {
               lastName = profile.lastName
               companyName = profile.company
               biography = profile.bio
-          
+              avatar = profile.avatarImage
             }
           }
         }
