@@ -133,7 +133,17 @@ extension ProfileView {
           let profileRecordID = profileReference.recordID
           
           CKContainer.default().publicCloudDatabase.fetch(withRecordID: profileRecordID) { profileRecord, error in
-            
+            guard let profileRecord, error == nil else {
+              print(error!.localizedDescription)
+              return }
+            DispatchQueue.main.async {
+              let profile = EAWProfile(record: profileRecord)
+              firstName = profile.firstName
+              lastName = profile.lastName
+              companyName = profile.company
+              biography = profile.bio
+          
+            }
           }
         }
     }//mainCKContainer

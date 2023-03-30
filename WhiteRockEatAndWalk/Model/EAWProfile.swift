@@ -8,6 +8,7 @@
 import Foundation
 
 import CloudKit
+import UIKit
 
 struct EAWProfile {
   
@@ -37,4 +38,14 @@ extension EAWProfile {
     company = record[Self.kCompany] as? String ?? "N/A"
     bio = record[Self.kBio] as? String ?? "N/A"
   }
+  
+  var avatarImage: UIImage {
+    guard let avatar else { return PlaceHolderImage.avatarImg! }
+    return avatar.convertToUIImage(in: .banner)
+  }
+  
+//  var bannerImg: UIImage {
+//    guard let  else { return PlaceHolderImage.bannerImg! }
+//    return asset.convertToUIImage(in: .banner)
+//  }
 }
