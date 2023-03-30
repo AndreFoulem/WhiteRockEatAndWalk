@@ -23,7 +23,7 @@ final class ProfileVM: ObservableObject {
           !companyName.isEmpty,
           !biography.isEmpty,
           avatar != PlaceHolderImage.avatarImg,
-          biography.count < 100 else { return false }
+          biography.count <= 100 else { return false }
     return true
   }
   
