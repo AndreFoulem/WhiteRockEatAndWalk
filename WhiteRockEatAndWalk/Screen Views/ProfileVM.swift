@@ -64,7 +64,23 @@ final class ProfileVM: ObservableObject {
     
     let profileRecordID = profileReference.recordID
     
-   
+    CKManager.shared.fetchRecord(with: profileRecordID) { result in
+      switch result {
+        case .success(let record):
+          DispatchQueue.main.async { [self] in
+            let profile = EAWProfile(record: record)
+            firstName = profile.firstName
+            lastName = profile.lastName
+            companyName = profile.company
+            biography = profile.bio
+            avatar = profile.avatarImage
+          }
+        case .failure(_):
+          <#code#>
+      }
+    }
+
+    
   }//getProfile
   
   private func createProfileRecord() -> CKRecord {
