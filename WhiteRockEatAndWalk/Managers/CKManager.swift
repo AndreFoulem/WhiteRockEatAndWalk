@@ -15,6 +15,29 @@ final class CKManager {
   
   var userRecord: CKRecord?
   
+  //-> run in background
+  func fetchUserRecord() {
+    CKContainer.default().fetchUserRecordID { recordID, error in
+      guard let recordID,
+            error == nil else {
+        print(error!.localizedDescription)
+        return
+      }
+      
+      CKContainer.default().publicCloudDatabase.fetch(withRecordID: recordID) { userRecord, error in
+        guard let userRecord,
+              error == nil else {
+          print(error!.localizedDescription)
+          return
+        }
+        self.userRecord = userRecord
+      }//ckContainer
+      
+    }//ckContainer
+    
+  }//fetchUserRecord
+  
+  
   func fetchLocations(completed: @escaping (Result<[EAWLocation], Error>) -> Void) {
     
     // Init NSSortDescriptor
