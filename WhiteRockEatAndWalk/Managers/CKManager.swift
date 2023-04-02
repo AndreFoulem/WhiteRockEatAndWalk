@@ -83,4 +83,8 @@ final class CKManager {
     
     CKContainer.default().publicCloudDatabase.add(operation)
   }
+  
+  func fetchRecord(with id: CKRecord.ID, completed: @escaping (Result<CKRecord, Error>) -> Void ) {
+    
+  }
 }

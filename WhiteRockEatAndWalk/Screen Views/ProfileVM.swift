@@ -56,39 +56,15 @@ final class ProfileVM: ObservableObject {
   func getProfile() {
     //-> get record or return
     guard let userRecord = CKManager.shared.userRecord else { return }
-
     
-    CKContainer.default().fetchUserRecordID { recordID, error in
-      guard let recordID,
-            error == nil else {
-        print(error!.localizedDescription)
-        return
-      }
-      CKContainer.default().publicCloudDatabase.fetch(withRecordID: recordID) { userRecord, error in
-        guard let userRecord,
-              error == nil else {
-          print(error!.localizedDescription)
-          return
-        }
-          // get the reference
-        let profileReference = userRecord["userProfile"] as! CKRecord.Reference
-        let profileRecordID = profileReference.recordID
-        
-        CKContainer.default().publicCloudDatabase.fetch(withRecordID: profileRecordID) { profileRecord, error in
-          guard let profileRecord, error == nil else {
-            print(error!.localizedDescription)
-            return }
-          DispatchQueue.main.async { [self] in
-            let profile = EAWProfile(record: profileRecord)
-            firstName = profile.firstName
-            lastName = profile.lastName
-            companyName = profile.company
-            biography = profile.bio
-            avatar = profile.avatarImage
-          }
-        }
-      }
-    }//mainCKContainer
+      // get the reference
+    guard let profileReference = userRecord["userProfile"] as? CKRecord.Reference else {
+      return
+    }
+    
+    let profileRecordID = profileReference.recordID
+    
+   
   }//getProfile
   
   private func createProfileRecord() -> CKRecord {
