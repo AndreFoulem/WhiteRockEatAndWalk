@@ -13,6 +13,8 @@ final class CKManager {
   
   private init() {}
   
+  var userRecord: CKRecord?
+  
   func fetchLocations(completed: @escaping (Result<[EAWLocation], Error>) -> Void) {
     
     // Init NSSortDescriptor
