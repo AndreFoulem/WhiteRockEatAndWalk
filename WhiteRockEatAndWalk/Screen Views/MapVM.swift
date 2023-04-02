@@ -67,7 +67,7 @@ final class MapVM: NSObject, ObservableObject {
   }
   
   func fetchLocations(for locationManager: LocationManager) {
-    CKManager.fetchLocations { [self] result in
+    CKManager.shared.fetchLocations { [self] result in
       DispatchQueue.main.async {
         switch result {
           case .success(let locations):

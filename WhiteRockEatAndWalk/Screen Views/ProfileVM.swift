@@ -1,9 +1,9 @@
-//
-//  ProfileVM.swift
-//  WhiteRockEatAndWalk
-//
-//  Created by AndreMacBook on 2023-03-29.
-//
+  //
+  //  ProfileVM.swift
+  //  WhiteRockEatAndWalk
+  //
+  //  Created by AndreMacBook on 2023-03-29.
+  //
 
 import Foundation
 import CloudKit
@@ -43,10 +43,10 @@ final class ProfileVM: ObservableObject {
     CKManager.shared.batchSave(records: [userRecord, profileRecord]) { result in
       switch result {
         case .success(_):
-          // show alert
+            // show alert
           break
         case .failure(_):
-          // success alert
+            // success alert
           break
       }
     }
@@ -54,7 +54,7 @@ final class ProfileVM: ObservableObject {
   }//createProfile
   
   func getProfile() {
-    //-> get record or return
+      //-> get record or return
     guard let userRecord = CKManager.shared.userRecord else { return }
     
       // get the reference
@@ -65,21 +65,22 @@ final class ProfileVM: ObservableObject {
     let profileRecordID = profileReference.recordID
     
     CKManager.shared.fetchRecord(with: profileRecordID) { result in
-      switch result {
-        case .success(let record):
-          DispatchQueue.main.async { [self] in
+      DispatchQueue.main.async { [self] in
+        switch result {
+          case .success(let record):
             let profile = EAWProfile(record: record)
             firstName = profile.firstName
             lastName = profile.lastName
             companyName = profile.company
             biography = profile.bio
             avatar = profile.avatarImage
-          }
-        case .failure(_):
-          <#code#>
+          case .failure(_):
+              // show alert
+            break
+        }
       }
     }
-
+    
     
   }//getProfile
   
