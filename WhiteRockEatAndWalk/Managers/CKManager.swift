@@ -68,7 +68,7 @@ final class CKManager {
     
   }
   
-  func createProfiles(records: [CKRecord], completed: @escaping (Result<[CKRecord], Error>) -> Void) {
+  func batchSave(records: [CKRecord], completed: @escaping (Result<[CKRecord], Error>) -> Void) {
       // Create CKOperation to save batch entry
     let operation = CKModifyRecordsOperation(recordsToSave: records)
     
@@ -78,7 +78,7 @@ final class CKManager {
         completed(.failure(error!))
         return
       }
-      print(savedRecords)
+      completed(.success(savedRecords))
     }
     
     CKContainer.default().publicCloudDatabase.add(operation)

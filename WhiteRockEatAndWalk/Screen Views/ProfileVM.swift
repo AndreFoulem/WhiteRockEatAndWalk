@@ -40,8 +40,16 @@ final class ProfileVM: ObservableObject {
       // Create References on UserRecord to the EAWProfile we created
     userRecord["userProfile"] = CKRecord.Reference(recordID: profileRecord.recordID, action: .none)
     
- 
- 
+    CKManager.shared.batchSave(records: [userRecord, profileRecord]) { result in
+      switch result {
+        case .success(_):
+          // show alert
+          break
+        case .failure(_):
+          // success alert
+          break
+      }
+    }
     
   }//createProfile
   
