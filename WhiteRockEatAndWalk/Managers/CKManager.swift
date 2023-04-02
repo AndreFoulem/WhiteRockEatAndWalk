@@ -7,7 +7,9 @@
 
 import CloudKit
 
-struct CKManager {
+final class CKManager {
+  
+  static let shared = CKManager()
   
   static func fetchLocations(completed: @escaping (Result<[EAWLocation], Error>) -> Void) {
     
