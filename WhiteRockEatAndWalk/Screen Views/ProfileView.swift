@@ -117,7 +117,7 @@ extension ProfileView {
   
   private var saveButton: some View {
     Button {
-//      createProfile()
+      vm.createProfile()
     } label: {
        ButtonLabel(label: "Save")
     }

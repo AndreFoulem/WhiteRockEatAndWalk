@@ -63,7 +63,6 @@ final class MapVM: NSObject, ObservableObject {
       @unknown default:
         break
     }
-    
   }
   
   func fetchLocations(for locationManager: LocationManager) {
