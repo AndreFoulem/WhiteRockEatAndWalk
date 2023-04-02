@@ -23,9 +23,10 @@ struct AppTabView: View {
             Label("Profile", systemImage: "person")
           }
       }
+      .onAppear { CKManager.shared.fetchUserRecord() }
 
 
-    }
+    }//body
 }
 
 struct AppTabView_Previews: PreviewProvider {
