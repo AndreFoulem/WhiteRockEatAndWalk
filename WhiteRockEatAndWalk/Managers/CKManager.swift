@@ -11,6 +11,8 @@ final class CKManager {
   
   static let shared = CKManager()
   
+  private init() {}
+  
   func fetchLocations(completed: @escaping (Result<[EAWLocation], Error>) -> Void) {
     
     // Init NSSortDescriptor
