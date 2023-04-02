@@ -15,7 +15,7 @@ final class CKManager {
   
   var userRecord: CKRecord?
   
-  //-> run in background
+    //-> run in background
   func fetchUserRecord() {
     CKContainer.default().fetchUserRecordID { recordID, error in
       guard let recordID,
@@ -40,31 +40,47 @@ final class CKManager {
   
   func fetchLocations(completed: @escaping (Result<[EAWLocation], Error>) -> Void) {
     
-    // Init NSSortDescriptor
+      // Init NSSortDescriptor
     let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
-    // Init CKQuery
+      // Init CKQuery
     let query = CKQuery(recordType: "EAWLocation", predicate: NSPredicate(value: true))
-    // Add NSSortDescriptor to CKQuery
+      // Add NSSortDescriptor to CKQuery
     query.sortDescriptors = [sortDescriptor]
     
-//    -> NON ASYNC/AWAIT with Completion :: Fetch with CKQuery
+      //    -> NON ASYNC/AWAIT with Completion :: Fetch with CKQuery
     CKContainer.default().publicCloudDatabase.perform(query, inZoneWith: nil) { records, error in
       
-      // Handle error
+        // Handle error
       guard error == nil else {
         completed(.failure(error!))
         return
       }
-
-      // Do we have records?
+      
+        // Do we have records?
       guard let records = records else { return }
-
+      
       
       let locations = records.map { $0.convertToEAWLocation() }
-
-      // Completed ** like return locations
+      
+        // Completed ** like return locations
       completed(.success(locations))
     }
-
+    
+  }
+  
+  func createProfiles(records: [CKRecord], completed: @escaping (Result<[CKRecord], Error>) -> Void) {
+      // Create CKOperation to save batch entry
+    let operation = CKModifyRecordsOperation(recordsToSave: records)
+    
+    operation.modifyRecordsCompletionBlock = { savedRecords, _, error in
+      guard let savedRecords,
+            error == nil else {
+        completed(.failure(error!))
+        return
+      }
+      print(savedRecords)
+    }
+    
+    CKContainer.default().publicCloudDatabase.add(operation)
   }
 }
