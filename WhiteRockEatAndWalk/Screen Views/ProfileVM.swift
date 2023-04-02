@@ -54,6 +54,10 @@ final class ProfileVM: ObservableObject {
   }//createProfile
   
   func getProfile() {
+    //-> get record or return
+    guard let userRecord = CKManager.shared.userRecord else { return }
+
+    
     CKContainer.default().fetchUserRecordID { recordID, error in
       guard let recordID,
             error == nil else {
