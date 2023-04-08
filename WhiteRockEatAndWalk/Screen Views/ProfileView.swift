@@ -4,7 +4,7 @@ import CloudKit
 //! import AvatarView
 
 struct ProfileView: View {
-  @StateObject private var vm = ProfileVM()
+    @StateObject private var vm = ProfileVM()
     
     var body: some View {
       
@@ -22,7 +22,7 @@ struct ProfileView: View {
          
         }//vs
         .padding(.horizontal)
-         LoadingView()
+         if vm.isLoading { LoadingView() }
         .toolbar {
           Button {
             dismissKeyboard()

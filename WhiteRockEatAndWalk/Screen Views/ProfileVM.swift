@@ -16,6 +16,7 @@ final class ProfileVM: ObservableObject {
   @Published var avatar = PlaceHolderImage.avatarImg!
   @Published var isShowingPhotoPicker = false
   @Published var alertItem: AlertItem?
+  @Published var isLoading: Bool = false
   
   func isValidProfile() -> Bool {
     guard !firstName.isEmpty,
@@ -40,14 +41,21 @@ final class ProfileVM: ObservableObject {
       // Create References on UserRecord to the EAWProfile we created
     userRecord["userProfile"] = CKRecord.Reference(recordID: profileRecord.recordID, action: .none)
     
+    // MARK: mutate -> isLoading = true
+    isLoading = true
     CKManager.shared.batchSave(records: [userRecord, profileRecord]) { result in
-      switch result {
-        case .success(_):
-            // show alert
-          break
-        case .failure(_):
-            // success alert
-          break
+      DispatchQueue.main.async { [self] in
+        // MARK: mutate -> isLoading = false
+        isLoading = false
+        
+        switch result {
+          case .success(_):
+              // show alert
+            break
+          case .failure(_):
+              // success alert
+            break
+        }
       }
     }
     
