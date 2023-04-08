@@ -10,12 +10,12 @@ import SwiftUI
 struct LoadingView: View {
     var body: some View {
       ZStack {
-        Color(.systemBackground)
-          .opacity(0.9)
+        Color.mint
+          .opacity(0.5)
           .ignoresSafeArea()
         
         ProgressView()
-          .progressViewStyle(CircularProgressViewStyle(tint: .mint))
+          .progressViewStyle(CircularProgressViewStyle(tint: .white))
           .scaleEffect(3)
           .offset(y: -40)
       }

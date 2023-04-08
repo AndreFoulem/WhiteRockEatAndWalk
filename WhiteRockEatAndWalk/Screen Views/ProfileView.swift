@@ -9,36 +9,43 @@ struct ProfileView: View {
     var body: some View {
       
       //: Container
-      VStack {
-        profileTitle
+      ZStack {
+  
+        VStack {
+          profileTitle
 
-        profileBanner
-        
-        profileBio
-        Spacer()
-        saveButton
-      }
-      .padding(.horizontal)
-      .toolbar {
-        Button {
-          dismissKeyboard()
-        } label: {
-          Image(systemName: "person")
+          profileBanner
+          
+          profileBio
+          Spacer()
+          saveButton
+         
+        }//vs
+        .padding(.horizontal)
+         LoadingView()
+        .toolbar {
+          Button {
+            dismissKeyboard()
+          } label: {
+            Image(systemName: "person")
+          }
         }
-      }
-      .onAppear {
-        vm.getProfile()
-      }
-      .alert(item: $vm.alertItem, content: { alertItem in
-        Alert(title: alertItem.title,
-              message: alertItem.message,
-              dismissButton: alertItem.dismissBtn
-        )
-      })
-      .sheet(isPresented: $vm.isShowingPhotoPicker) {
-        PhotoPicker(image: $vm.avatar)
-      }
-      .navigationTitle("Profile")
+        .onAppear {
+          vm.getProfile()
+        }
+        .alert(item: $vm.alertItem, content: { alertItem in
+          Alert(title: alertItem.title,
+                message: alertItem.message,
+                dismissButton: alertItem.dismissBtn
+          )
+        })
+        .sheet(isPresented: $vm.isShowingPhotoPicker) {
+          PhotoPicker(image: $vm.avatar)
+        }
+       .navigationTitle("Profile")
+     
+      }//zstack
+    
     }
 }
 
