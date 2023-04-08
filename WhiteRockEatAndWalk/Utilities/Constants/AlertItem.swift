@@ -37,4 +37,20 @@ struct AlertContext {
   static let invalidProfile = AlertItem(title: Text("Invalid Profile"),
                                               message: Text("All text fields needt to be filled up. A default avatar image should be chosen"),
                                               dismissBtn: .default(Text("OK")))
+  
+  static let noUserRecord = AlertItem(title: Text("No User Profile"),
+                                              message: Text("You must log in on your phone in order to utilize"),
+                                              dismissBtn: .default(Text("OK")))
+  
+  static let createProfileSuccess = AlertItem(title: Text("Profile Created"),
+                                              message: Text(""),
+                                              dismissBtn: .default(Text("OK")))
+  
+  static let createProfileFailure = AlertItem(title: Text("Failed to create profile"),
+                                      message: Text("We were not able to create a profile at this time. Please try again later or contact customer support"),
+                                      dismissBtn: .default(Text("OK")))
+  
+  static let unableToRetrieveProfile = AlertItem(title: Text("Unable to retrieve profile"),
+                                      message: Text("We were not able to retrieve profile at this time. Please try again later or contact customer support"),
+                                      dismissBtn: .default(Text("OK")))
 }

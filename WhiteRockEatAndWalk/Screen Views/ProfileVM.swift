@@ -36,25 +36,23 @@ final class ProfileVM: ObservableObject {
     
     let profileRecord = createProfileRecord()
     
-    guard let userRecord = CKManager.shared.userRecord else { return }
+    guard let userRecord = CKManager.shared.userRecord else {
+      alertItem = AlertContext.noUserRecord
+      return
+    }
     
       // Create References on UserRecord to the EAWProfile we created
     userRecord["userProfile"] = CKRecord.Reference(recordID: profileRecord.recordID, action: .none)
     
-    // MARK: Show Loading Spinner
     showLoadingSpinner()
     CKManager.shared.batchSave(records: [userRecord, profileRecord]) { result in
       DispatchQueue.main.async { [self] in
-        // MARK: Hide Loading Spinner
         hideLoadingSpinner()
-        
         switch result {
           case .success(_):
-              // show alert
-            break
+            alertItem = AlertContext.createProfileSuccess
           case .failure(_):
-              // success alert
-            break
+            alertItem = AlertContext.noUserRecord
         }
       }
     }
@@ -76,7 +74,6 @@ final class ProfileVM: ObservableObject {
     CKManager.shared.fetchRecord(with: profileRecordID) { result in
       DispatchQueue.main.async { [self] in
         hideLoadingSpinner()
-        
         switch result {
           case .success(let record):
             let profile = EAWProfile(record: record)
@@ -86,8 +83,7 @@ final class ProfileVM: ObservableObject {
             biography = profile.bio
             avatar = profile.avatarImage
           case .failure(_):
-              // show alert
-            break
+            alertItem = AlertContext.unableToRetrieveProfile
         }
       }
     }

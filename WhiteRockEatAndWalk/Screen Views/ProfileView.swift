@@ -22,7 +22,6 @@ struct ProfileView: View {
          
         }//vs
         .padding(.horizontal)
-         if vm.isLoading { LoadingView() }
         .toolbar {
           Button {
             dismissKeyboard()
@@ -43,7 +42,7 @@ struct ProfileView: View {
           PhotoPicker(image: $vm.avatar)
         }
        .navigationTitle("Profile")
-     
+        if vm.isLoading { LoadingView() }
       }//zstack
     
     }
