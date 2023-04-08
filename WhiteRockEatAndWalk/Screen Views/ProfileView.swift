@@ -1,9 +1,3 @@
-//
-//  ProfileView.swift
-//  WhiteRockEatAndWalk
-//
-//  Created by AndreMacBook on 2023-03-20.
-//
 
 import SwiftUI
 import CloudKit
