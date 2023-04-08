@@ -41,12 +41,12 @@ final class ProfileVM: ObservableObject {
       // Create References on UserRecord to the EAWProfile we created
     userRecord["userProfile"] = CKRecord.Reference(recordID: profileRecord.recordID, action: .none)
     
-    // MARK: mutate -> isLoading = true
-    isLoading = true
+    // MARK: Show Loading Spinner
+    showLoadingSpinner()
     CKManager.shared.batchSave(records: [userRecord, profileRecord]) { result in
       DispatchQueue.main.async { [self] in
-        // MARK: mutate -> isLoading = false
-        isLoading = false
+        // MARK: Hide Loading Spinner
+        hideLoadingSpinner()
         
         switch result {
           case .success(_):
@@ -72,8 +72,11 @@ final class ProfileVM: ObservableObject {
     
     let profileRecordID = profileReference.recordID
     
+    showLoadingSpinner()
     CKManager.shared.fetchRecord(with: profileRecordID) { result in
       DispatchQueue.main.async { [self] in
+        hideLoadingSpinner()
+        
         switch result {
           case .success(let record):
             let profile = EAWProfile(record: record)
@@ -103,4 +106,10 @@ final class ProfileVM: ObservableObject {
     
     return profileRecord
   }
+}
+
+// MARK: Helpers Functions
+extension ProfileVM {
+  private func showLoadingSpinner() { isLoading = true }
+  private func hideLoadingSpinner() { isLoading = false }
 }
