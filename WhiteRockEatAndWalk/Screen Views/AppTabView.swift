@@ -24,8 +24,6 @@ struct AppTabView: View {
           }
       }
       .onAppear { CKManager.shared.fetchUserRecord() }
-
-
     }//body
 }
 
