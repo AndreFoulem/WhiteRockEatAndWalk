@@ -84,6 +84,13 @@ final class CKManager {
     CKContainer.default().publicCloudDatabase.add(operation)
   }
   
+  func save(record: CKRecord,
+            completed: @escaping (Result<CKRecord, Error>)
+            -> Void) {
+    
+    
+  }
+  
   func fetchRecord(with id: CKRecord.ID, completed: @escaping (Result<CKRecord, Error>) -> Void ) {
     
     CKContainer.default().publicCloudDatabase.fetch(withRecordID: id) { record, error in
