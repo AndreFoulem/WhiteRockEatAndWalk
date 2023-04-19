@@ -18,7 +18,9 @@ final class ProfileVM: ObservableObject {
   @Published var alertItem: AlertItem?
   @Published var isLoading: Bool = false
   
-  private var existingProfileRecord: CKRecord?
+  private var existingProfileRecord: CKRecord? {
+    didSet { }
+  }
   
   func isValidProfile() -> Bool {
     guard !firstName.isEmpty,
@@ -112,7 +114,7 @@ final class ProfileVM: ObservableObject {
       profileRecord[EAWProfile.kBio] = biography
       profileRecord[EAWProfile.kCompany] = companyName
       profileRecord[EAWProfile.kAvatar] = avatar.convertToCKAsset()
-    
+      
       showLoadingSpinner()
       CKManager.shared.save(record: profileRecord) { result in
         DispatchQueue.main.async { [self] in
