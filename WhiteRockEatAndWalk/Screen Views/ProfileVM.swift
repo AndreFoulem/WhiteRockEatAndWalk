@@ -99,7 +99,29 @@ final class ProfileVM: ObservableObject {
   
   // UPDATE PROFILE
   func updateProfile() {
+    guard isValidProfile() else {
+      alertItem = AlertContext.invalidProfile
+      return
+    }
+    guard let profileRecord = existingProfileRecord else {
+      alertItem = AlertContext.unableToRetrieveProfile
+      return
+    }
+      profileRecord[EAWProfile.kFirstName] = firstName
+      profileRecord[EAWProfile.kLastName] = lastName
+      profileRecord[EAWProfile.kBio] = biography
+      profileRecord[EAWProfile.kCompany] = companyName
+      profileRecord[EAWProfile.kAvatar] = avatar.convertToCKAsset()
     
+      showLoadingSpinner()
+      CKManager.shared.save(record: profileRecord) { result in
+        switch result {
+          case .success(_):
+            <#code#>
+          case .failure(_):
+            <#code#>
+        }
+      }
   }
   
   private func createProfileRecord() -> CKRecord {
