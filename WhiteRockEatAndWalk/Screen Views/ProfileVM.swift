@@ -115,11 +115,13 @@ final class ProfileVM: ObservableObject {
     
       showLoadingSpinner()
       CKManager.shared.save(record: profileRecord) { result in
-        switch result {
-          case .success(_):
-            <#code#>
-          case .failure(_):
-            <#code#>
+        DispatchQueue.main.async { [self] in
+          switch result {
+            case .success(_):
+              alertItem = AlertContext.updateProfileSucess
+            case .failure(_):
+              alertItem = AlertContext.updateProfileFailure
+          }
         }
       }
   }
