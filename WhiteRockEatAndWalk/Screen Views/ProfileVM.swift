@@ -18,6 +18,8 @@ final class ProfileVM: ObservableObject {
   @Published var alertItem: AlertItem?
   @Published var isLoading: Bool = false
   
+  private var profileRecord: CKRecord?
+  
   func isValidProfile() -> Bool {
     guard !firstName.isEmpty,
           !lastName.isEmpty,
@@ -76,6 +78,7 @@ final class ProfileVM: ObservableObject {
         hideLoadingSpinner()
         switch result {
           case .success(let record):
+            profileRecord = record
             let profile = EAWProfile(record: record)
             firstName = profile.firstName
             lastName = profile.lastName
@@ -90,6 +93,11 @@ final class ProfileVM: ObservableObject {
     
     
   }//getProfile
+  
+  // UPDATE PROFILE
+  func updateProfile() {
+    
+  }
   
   private func createProfileRecord() -> CKRecord {
       // Create our CKRecord from the profile view
