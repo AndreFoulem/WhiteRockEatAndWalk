@@ -18,7 +18,7 @@ final class ProfileVM: ObservableObject {
   @Published var alertItem: AlertItem?
   @Published var isLoading: Bool = false
   
-  private var profileRecord: CKRecord?
+  private var existingProfileRecord: CKRecord?
   
   func isValidProfile() -> Bool {
     guard !firstName.isEmpty,
@@ -51,7 +51,10 @@ final class ProfileVM: ObservableObject {
       DispatchQueue.main.async { [self] in
         hideLoadingSpinner()
         switch result {
-          case .success(_):
+          case .success(let records):
+            for record in records where record.recordType == RecordType.profile {
+              existingProfileRecord = record
+            }
             alertItem = AlertContext.createProfileSuccess
           case .failure(_):
             alertItem = AlertContext.noUserRecord
@@ -78,7 +81,7 @@ final class ProfileVM: ObservableObject {
         hideLoadingSpinner()
         switch result {
           case .success(let record):
-            profileRecord = record
+            existingProfileRecord = record
             let profile = EAWProfile(record: record)
             firstName = profile.firstName
             lastName = profile.lastName
