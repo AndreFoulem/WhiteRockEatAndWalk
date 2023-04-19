@@ -87,7 +87,13 @@ final class CKManager {
   func save(record: CKRecord,
             completed: @escaping (Result<CKRecord, Error>)
             -> Void) {
-    
+    CKContainer.default().publicCloudDatabase.save(record) { record, error in
+      guard let record, error == nil else {
+        completed(.failure(error!))
+        return
+      }
+      completed(.success(record))
+    }
     
   }
   
